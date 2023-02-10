@@ -1,8 +1,6 @@
-
-
-
 .header-container {
-height: 70vh;
+    height: 70vh;
+    min-height: 350px;
     background-image: url('https://meinhof.ch/src/bueroHorw/bueroHorwTitelbildBlur.jpeg');
     background-position: center center;
     background-attachment: fixed;
@@ -12,21 +10,27 @@ height: 70vh;
     max-height: 120em;
     padding-bottom: 2rem;
 
-        img{
-            display: flex;
-            margin: auto;
-            padding-top: 3%;
-            cursor: pointer;
-            width: 220px;
+    img {
+        display: flex;
+        margin: auto;
+        padding-top: 3%;
+        cursor: pointer;
+        width: 220px;
 
-                &:hover{
-                    width: 224px !important;
-                    margin-bottom: -1.5px !important;
-                }
-  
+        &:hover {
+            width: 224px !important;
+            margin-bottom: -1.5px !important;
         }
 
-        a{
-            position:relative;
-        }
+    }
+    $primary-color:#ffffff;
+
+    .header-text{
+        display: flex;
+       justify-content: center;
+       margin-top: 15vh;
+       color: $primary-color;
+       font-family: "raleway", sans-serif;
+       font-size: 700%;
+    }
 }

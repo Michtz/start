@@ -2,9 +2,16 @@ html{
     padding: 0 1vw;
     background-color: white;
     scroll-behavior: smooth;
+    
    
 }
-
+.main{scrollbar-width: 0;}
+p{font-family: "raleway", sans-serif;}
+a{font-family: "raleway", sans-serif;}
+li{
+    font-family: "raleway", sans-serif;
+    list-style: none;
+}
         body{
             font-family: 'raleway';
             font-weight: 300;

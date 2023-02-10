@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import HeaderContainer from "./component/HeaderContainer";
-import  "./styles/main.scss";
-import ContentContainer from "./component/ContentContainer";
-import Footer from "./component/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BueroHorw from "./pages/BueroHorw";
 
 
 const root = ReactDOM.createRoot(
@@ -12,11 +10,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <HeaderContainer />
-    <main className={'main'}>
-    <ContentContainer />
-    </main>
-    <Footer />
+    <BrowserRouter>
+    <Routes>
+
+<Route index element={<BueroHorw />} />
+    </Routes>
+   
+    </BrowserRouter>
+   
 
   </React.StrictMode>
 );

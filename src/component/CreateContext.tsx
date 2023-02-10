@@ -22,5 +22,7 @@ export const BlogContent = createContext([
             ermöglichen. Die Materialien sollen eine klare Verbindung zum Besprechungsraum aufweisen und das Materialkonzept komplementieren.`,
     src: 'https://meinhof.ch/src/bueroHorw/bueroHorwB02.jpg',
     src2: 'https://meinhof.ch/src/bueroHorw/bueroHorwB01.jpg',
-  }
+  },
 ]);
+
+export const Headers = createContext([{ header: 'Büro Horw' }, { header: 'Studio Neubau' }]);
