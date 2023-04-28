@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
-import PictureTextContainer from './PictureTextContainer';
+import PictureTextContainerSlider from './PictureTextContainerSlider';
 import ProjectHeader from './ProjectHeader';
 import { BlogContent } from './CreateContext';
+import PictureTextContainer from './PictureTextContainer';
 
-const ContentContainer = () => {
-  const blog = useContext(BlogContent);
-  console.log(blog);
-
+const ContentContainer = (content:any) => {
+  const blog = content.content;
   return (
     <div>
       <ProjectHeader />
-      <PictureTextContainer src={blog[0].src} src2={blog[2].src2} text={blog[0].text} right />
-      <PictureTextContainer src={blog[2].src} src2={blog[2].src2} text={blog[2].text} />
+      <hr></hr>
+      <PictureTextContainer src={blog[0].src} text={blog[0].text} />
+      <PictureTextContainerSlider src={blog[1].src} src2={blog[1].src2} text={blog[1].text}  />
+      <PictureTextContainerSlider src={blog[2].src} src2={blog[2].src2} text={blog[2].text} right />
     </div>
   );
 };

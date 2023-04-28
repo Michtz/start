@@ -3,7 +3,7 @@ import style from '../styles/header.module.scss';
 import DreieckComponent from './DreieckComponent';
 
 
-const HeaderContainer = (content:any) => {
+const HomeHeaderContainer = (content:any) => {
 
   const clickLogo = () => {
     console.log('go home');
@@ -11,12 +11,12 @@ const HeaderContainer = (content:any) => {
 
   return (
     <div>
-      <div className={style['header-container']}>
+      <div className={style['home-header-container']}>
         <img onClick={clickLogo} src="https://meinhof.ch/src/logo/meinhofLogoWeissID.png" />
-        <div className={style['header-text']}>{content.content}</div>
+        <div className={style['header-text']}>INTERIOR <br/>DESIGN<br/> WITH<br/> IDENTITY</div>
       </div>
       <DreieckComponent />
     </div>
   );
 };
-export default HeaderContainer;
+export default HomeHeaderContainer;

@@ -6,18 +6,18 @@ import Footer from '../component/Footer';
 import HeaderContainer from '../component/HeaderContainer';
 import style from '../styles/main.module.scss';
 
-const BueroHorw = () => {
+const WohnungAmSee = () => {
   const blog = useContext(BlogContent);
   const titel = useContext(Headers);
 
   return (
     <>
-      <HeaderContainer content={titel[0].header} />
+      <HeaderContainer content={titel[4].header} />
       <main className={style['main']}>
-        <ContentContainer content={blog[0].project}/>
+        <ContentContainer content={blog[4].project}/>
       </main>
       <Footer />
     </>
   );
 };
-export default BueroHorw;
+export default WohnungAmSee;

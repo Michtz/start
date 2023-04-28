@@ -11,7 +11,9 @@ const ProjectHeader = () => {
       <p className={style['projektgrösseText']}>klein (0-50m2)</p>
 
       <h2 className={style['designethos']}>Designethos:</h2>
-      <p className={style['designethosText']}>Klare geometrische Form, Naturelle Materialien und Farben, Form folgt Funktion</p>
+      <p className={style['designethosText']}>
+        Klare geometrische Form, Naturelle Materialien und Farben, Form folgt Funktion
+      </p>
 
       <h2 className={style['konzept']}>Konzept:</h2>
       <p className={style['konzeptText']}>Büro Dschungel</p>

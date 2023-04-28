@@ -34,3 +34,42 @@
        font-size: 700%;
     }
 }
+
+.home-header-container{
+    height: 70vh;
+    min-height: 350px;
+    background-image: url('https://meinhof.ch/src/titelbilder/badehausBeleuchtet.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 -1vw;
+    max-height: 120em;
+    padding-bottom: 2rem;
+
+    img {
+        display: flex;
+        margin: auto;
+        padding-top: 3%;
+        cursor: pointer;
+        width: 220px;
+
+        &:hover {
+            width: 224px !important;
+            margin-bottom: -1.5px !important;
+        }
+
+    }
+    $primary-color:#ffffff;
+
+    .header-text{
+        display: flex;
+       justify-content: center;
+       text-align: center;
+       margin-top: 15vh;
+       color: $primary-color;
+       font-family: "raleway", sans-serif;
+       font-size: 600%;
+       line-height: 70%;
+    }
+}
