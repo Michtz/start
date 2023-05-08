@@ -14,7 +14,7 @@ const WohnungAmSee = () => {
     <>
       <HeaderContainer content={titel[4].header} />
       <main className={style['main']}>
-        <ContentContainer content={blog[4].project}/>
+        <ContentContainer content={blog[4].project} />
       </main>
       <Footer />
     </>

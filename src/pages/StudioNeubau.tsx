@@ -12,9 +12,9 @@ const StudioNeubau = () => {
 
   return (
     <>
-      <HeaderContainer content={titel[3].header}/>
+      <HeaderContainer content={titel[3].header} />
       <main className={style['main']}>
-        <ContentContainer content={blog[3].project}/>
+        <ContentContainer content={blog[3].project} />
       </main>
       <Footer />
     </>

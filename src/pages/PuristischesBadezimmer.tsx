@@ -12,9 +12,9 @@ const PuristischesBadezimmer = () => {
 
   return (
     <>
-      <HeaderContainer content={titel[2].header}/>
+      <HeaderContainer content={titel[2].header} />
       <main className={style['main']}>
-        <ContentContainer content={blog[2].project}/>
+        <ContentContainer content={blog[2].project} />
       </main>
       <Footer />
     </>

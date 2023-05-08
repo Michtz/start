@@ -14,7 +14,7 @@ const BueroHorw = () => {
     <>
       <HeaderContainer content={titel[0].header} />
       <main className={style['main']}>
-        <ContentContainer content={blog[0].project}/>
+        <ContentContainer content={blog[0].project} />
       </main>
       <Footer />
     </>

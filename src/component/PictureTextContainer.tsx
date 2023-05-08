@@ -8,15 +8,13 @@ interface Props {
 }
 
 const PictureTextContainer: React.FC<Props> = (props: Props): JSX.Element => {
-
   return (
     <div className={style['contribution-container']}>
-    <div className={style[`fade-in-out`]}>
-        <img className={style['projektbilder']} src={props.src } />
+      <div className={style[`fade-in-out`]}>
+        <img className={style['projektbilder']} src={props.src} />
       </div>
       <p className={style['projektTextLinks']}>{props.text}</p>
     </div>
   );
 };
 export default PictureTextContainer;
-

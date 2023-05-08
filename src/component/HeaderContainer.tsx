@@ -2,9 +2,7 @@ import React from 'react';
 import style from '../styles/header.module.scss';
 import DreieckComponent from './DreieckComponent';
 
-
-const HeaderContainer = (content:any) => {
-
+const HeaderContainer = (content: any) => {
   const clickLogo = () => {
     console.log('go home');
   };
