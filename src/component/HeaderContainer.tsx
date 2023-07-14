@@ -1,6 +1,7 @@
 import React from 'react';
 import style from '../styles/header.module.scss';
 import DreieckComponent from './DreieckComponent';
+import { MenuContentMain } from './Menu';
 
 const HeaderContainer = (content: any) => {
   const clickLogo = () => {

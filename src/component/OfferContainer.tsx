@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import ContainerComponent from './ContainerComponent';
 import { MainContent } from './CreateContext';
 import style from '../styles/offerContainer.module.scss';
 
@@ -37,8 +36,8 @@ const OfferContainer = () => {
         <Circle transparency={'0.25'} />
         <Circle transparency={'0.5'} />
       </div>
-      {content.map((items: any) => (
-        <div>
+      {content.map((items: any, i:number) => (
+        <div key={i}>
           <h3>{items.title}</h3>
           <div>{items.content}</div>
         </div>

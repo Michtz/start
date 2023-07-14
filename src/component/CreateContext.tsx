@@ -23,7 +23,35 @@ export const MainContent = createContext([
           }
         ]
       }
-    ]
+    ],
+    overUs: [
+      {
+        title: 'Über uns',
+        content: [
+          {
+            title: 'Beratung',
+            content:
+              'Sie möchten Räumlichkeiten neu gestalten und brauchen Unterstützung? Wir beraten Sie gerne bei der Inneneinrichtung, der Farbwahl, der Raumgestaltung und vielem mehr.'
+          },
+          {
+            title: 'Konzept',
+            content:
+              'Sie wollen einen konkreten Gestaltungsvorschlag für ihre Innenräume? Wir veranschaulichen durch Moodboards, Visualisierungen (3D-Zeichnung) und Pläne die Neugestaltung ihrer Räumlichkeiten.'
+          },
+          {
+            title: 'Ausführung',
+            content:
+              'Sie bauen um oder Gestalten neu und wollen ihr gestalterisches Konzept detailgetreu umgesetzt wissen? Wir begleiten das Projekt von der Beratung über das Konzept, bis hin zur Schlüsselübergabe!'
+          }
+        ]
+      }
+    ],
+    about: 
+      {
+        title: 'Über uns',
+        content: "Wir sind die Meinhof GmbH, ein Innenarchitektur Büro mit Sitz im Kanton Luzern. Wir beraten, planen und führen Umbau-, Möblierungs- und Umgestaltungsprojekte aus. Mit Leidenschaft und viel liebe zum Detail verwirklichen wir Ihren Traum vom neuen Lebensraum. Über eine Kontaktaufnahme würden wir uns sehr Freuen!"
+      }
+    
   }
 ]);
 
@@ -211,7 +239,7 @@ export const Headers = createContext([
   {
     header: 'Büro Videolution',
     src: 'https://meinhof.ch/src/zugeschnittenProject/titelVideolution.jpg',
-    path: 'BüroVideolution'
+    path: 'BueroVideolution'
   },
   {
     header: 'Puristisches Badezimmer',
@@ -227,5 +255,23 @@ export const Headers = createContext([
     header: 'Wohnung am See',
     src: 'https://meinhof.ch/src/zugeschnittenProject/titelNeuenburg.jpg',
     path: 'WohnungamSee'
+  }
+]);
+
+export const NavContent = createContext([
+  {
+    header: 'Kontakt',
+    src: '',
+    path: '#contact'
+  },
+  {
+    header: 'Über Uns',
+    src: '',
+    path: '#about'
+  },
+  {
+    header: 'Projekte',
+    src: '',
+    path: '#projects'
   }
 ]);
