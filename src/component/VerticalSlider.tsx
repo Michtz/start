@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { transform } from 'typescript';
 import style from '../styles/verticalSlider.module.scss';
 
 const VerticalSlider = (props: any) => {

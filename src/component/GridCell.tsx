@@ -5,15 +5,6 @@ import style from '../styles/grid.module.scss';
 const GridCell = (props: any) => {
   const content = props.title;
 
-  {
-    /*   <figure id="projectThree" class="projekteGrid" onclick="goToProjectThree()">
-                        <img id="project3Home" src="https://meinhof.ch/src/zugeschnittenProject/titelNeuenburg.jpg">
-                        <figcaption>
-                            <h2>Wohnung<br>am See</h2>
-                        </figcaption>
-                    </figure> */
-  }
-
   return (
     <div className={style['grid-container-container']}>
       {content.map((item: any, index: number) => (

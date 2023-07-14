@@ -20,7 +20,6 @@ const Home = () => {
 
   return (
     <>
-   
       <HomeHeaderContainer content={titel} />
       <GridContainer content={content} />
       <DreieckComponent />

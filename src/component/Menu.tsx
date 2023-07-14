@@ -4,7 +4,6 @@ import style from '../styles/navigation.module.scss';
 import Hamburger from 'hamburger-react';
 import { Link } from 'react-router-dom';
 import { Headers, NavContent } from '../component/CreateContext';
-import path from 'path';
 
 export const MenuContentProjects = () => {
   const context = useContext(Headers);

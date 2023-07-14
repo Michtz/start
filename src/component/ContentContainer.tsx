@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PictureTextContainerSlider from './PictureTextContainerSlider';
 import ProjectHeader from './ProjectHeader';
-import { BlogContent } from './CreateContext';
 import PictureTextContainer from './PictureTextContainer';
 
 const ContentContainer = (content: any) => {

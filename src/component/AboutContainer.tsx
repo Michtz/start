@@ -24,15 +24,10 @@ const Header = () => {
 
 const AboutContent = () => {
   const context = useContext(MainContent);
-  console.log();
-
   return <div>{context[0].about.content}</div>;
 };
 
 const AboutContainer = () => {
-  // const context = useContext(MainContent);
-  // const title = context[0].offer[1].title;
-  // const content = context[0].offer[1].content;
   return (
     <>
       <Header />
