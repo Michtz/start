@@ -1,0 +1,23 @@
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  
+  .slider-item {
+    flex-shrink: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    opacity: 0;
+    
+    &.active {
+      opacity: 1;
+    }
+    
+    img {
+      width: 220px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

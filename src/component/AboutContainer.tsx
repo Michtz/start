@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { MainContent } from './CreateContext';
 import style from '../styles/about.module.scss';
+import HeaderBox from './HeaderBox';
 
 const Header = () => {
   return (
@@ -28,8 +29,11 @@ const AboutContent = () => {
 };
 
 const AboutContainer = () => {
+  const content = useContext(MainContent);
+
   return (
     <>
+      <HeaderBox titel={content[0].about.title} id={content[0].about.id} />
       <Header />
       <AboutContent />
     </>

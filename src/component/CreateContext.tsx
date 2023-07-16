@@ -46,12 +46,96 @@ export const MainContent = createContext([
         ]
       }
     ],
-    about: 
-      {
-        title: 'Über uns',
-        content: "Wir sind die Meinhof GmbH, ein Innenarchitektur Büro mit Sitz im Kanton Luzern. Wir beraten, planen und führen Umbau-, Möblierungs- und Umgestaltungsprojekte aus. Mit Leidenschaft und viel liebe zum Detail verwirklichen wir Ihren Traum vom neuen Lebensraum. Über eine Kontaktaufnahme würden wir uns sehr Freuen!"
-      }
-    
+    about: {
+      title: 'Über uns',
+      content:
+        'Wir sind die Meinhof GmbH, ein Innenarchitektur Büro mit Sitz im Kanton Luzern. Wir beraten, planen und führen Umbau-, Möblierungs- und Umgestaltungsprojekte aus. Mit Leidenschaft und viel liebe zum Detail verwirklichen wir Ihren Traum vom neuen Lebensraum. Über eine Kontaktaufnahme würden wir uns sehr Freuen!',
+      id: 'about'
+    },
+    offerTest: {
+      title: 'Angebot',
+      content: [
+        {
+          title: 'Beratung',
+          content:
+            'Sie möchten Räumlichkeiten neu gestalten und brauchen Unterstützung? Wir beraten Sie gerne bei der Inneneinrichtung, der Farbwahl, der Raumgestaltung und vielem mehr.'
+        },
+        {
+          title: 'Konzept',
+          content:
+            'Sie wollen einen konkreten Gestaltungsvorschlag für ihre Innenräume? Wir veranschaulichen durch Moodboards, Visualisierungen (3D-Zeichnung) und Pläne die Neugestaltung ihrer Räumlichkeiten.'
+        },
+        {
+          title: 'Ausführung',
+          content:
+            'Sie bauen um oder Gestalten neu und wollen ihr gestalterisches Konzept detailgetreu umgesetzt wissen? Wir begleiten das Projekt von der Beratung über das Konzept, bis hin zur Schlüsselübergabe!'
+        }
+      ],
+      id: 'offert'
+    },
+    project: {
+      title: 'Projekte',
+      content: [
+        {
+          title: 'Beratung',
+          content:
+            'Sie möchten Räumlichkeiten neu gestalten und brauchen Unterstützung? Wir beraten Sie gerne bei der Inneneinrichtung, der Farbwahl, der Raumgestaltung und vielem mehr.'
+        },
+        {
+          title: 'Konzept',
+          content:
+            'Sie wollen einen konkreten Gestaltungsvorschlag für ihre Innenräume? Wir veranschaulichen durch Moodboards, Visualisierungen (3D-Zeichnung) und Pläne die Neugestaltung ihrer Räumlichkeiten.'
+        },
+        {
+          title: 'Ausführung',
+          content:
+            'Sie bauen um oder Gestalten neu und wollen ihr gestalterisches Konzept detailgetreu umgesetzt wissen? Wir begleiten das Projekt von der Beratung über das Konzept, bis hin zur Schlüsselübergabe!'
+        }
+      ],
+      id: 'projects'
+    },
+    customersAndClients: {
+      title: 'Kunden und Partner',
+      content: [
+        {
+          title: 'Beratung',
+          content:
+            'Sie möchten Räumlichkeiten neu gestalten und brauchen Unterstützung? Wir beraten Sie gerne bei der Inneneinrichtung, der Farbwahl, der Raumgestaltung und vielem mehr.'
+        },
+        {
+          title: 'Konzept',
+          content:
+            'Sie wollen einen konkreten Gestaltungsvorschlag für ihre Innenräume? Wir veranschaulichen durch Moodboards, Visualisierungen (3D-Zeichnung) und Pläne die Neugestaltung ihrer Räumlichkeiten.'
+        },
+        {
+          title: 'Ausführung',
+          content:
+            'Sie bauen um oder Gestalten neu und wollen ihr gestalterisches Konzept detailgetreu umgesetzt wissen? Wir begleiten das Projekt von der Beratung über das Konzept, bis hin zur Schlüsselübergabe!'
+        }
+      ],
+      id: 'customersAndClients'
+    },
+    location: {
+      title: 'Standort',
+      content: [
+        {
+          title: 'Beratung',
+          content:
+            'Sie möchten Räumlichkeiten neu gestalten und brauchen Unterstützung? Wir beraten Sie gerne bei der Inneneinrichtung, der Farbwahl, der Raumgestaltung und vielem mehr.'
+        },
+        {
+          title: 'Konzept',
+          content:
+            'Sie wollen einen konkreten Gestaltungsvorschlag für ihre Innenräume? Wir veranschaulichen durch Moodboards, Visualisierungen (3D-Zeichnung) und Pläne die Neugestaltung ihrer Räumlichkeiten.'
+        },
+        {
+          title: 'Ausführung',
+          content:
+            'Sie bauen um oder Gestalten neu und wollen ihr gestalterisches Konzept detailgetreu umgesetzt wissen? Wir begleiten das Projekt von der Beratung über das Konzept, bis hin zur Schlüsselübergabe!'
+        }
+      ],
+      id: 'location'
+    }
   }
 ]);
 
@@ -273,5 +357,23 @@ export const NavContent = createContext([
     header: 'Projekte',
     src: '',
     path: '#projects'
+  }
+]);
+
+export const ClientsAndCustomers = createContext([
+  {
+    name: 'Videolution',
+    src: 'https://usercontent.one/wp/www.meinhof.ch/wp-content/uploads/2022/07/videolutions-logo_white.png?media=1653409358&quot',
+    path: ''
+  },
+  {
+    name: 'Schreinerei Meer',
+    src: 'https://usercontent.one/wp/www.meinhof.ch/wp-content/uploads/2022/07/1477141671-e1658220760603.png?media=1653409358&quot',
+    path: ''
+  },
+  {
+    name: 'Zentrum Eichgut',
+    src: 'https://meinhof.ch/src/logoPartner/healthManagementWeiss.png',
+    path: ''
   }
 ]);

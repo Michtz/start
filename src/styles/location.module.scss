@@ -1,0 +1,12 @@
+.google-map {
+    height: 25rem;
+    position: relative;
+    width:  70%;
+
+    /* Macht Maps Grau/ Weiss */
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;
+}

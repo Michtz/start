@@ -12,6 +12,9 @@ import OfferContainer from '../component/OfferContainer';
 import { Divide as Hamburger } from 'hamburger-react';
 import VerticalSlider from '../component/VerticalSlider';
 import { Menu } from '../component/Menu';
+import ProjectContainer from '../component/ProjectContainer';
+import LocationContainer from '../component/LocationContainer';
+import CustomersAndClients from '../component/CustomersAndClientsContainer';
 
 const Home = () => {
   const blog = useContext(BlogContent);
@@ -21,15 +24,15 @@ const Home = () => {
   return (
     <>
       <HomeHeaderContainer content={titel} />
-      <GridContainer content={content} />
+      <ProjectContainer />
       <DreieckComponent />
       <OfferContainer />
       <DreieckComponent />
       <AboutContainer />
       <DreieckComponent />
-      kunden und partner
+      <CustomersAndClients />
       <DreieckComponent />
-      standort
+      <LocationContainer />
       <Footer />
     </>
   );

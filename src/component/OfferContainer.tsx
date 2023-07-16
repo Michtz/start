@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { MainContent } from './CreateContext';
 import style from '../styles/offerContainer.module.scss';
+import HeaderBox from './HeaderBox';
 
 const Circle = (transparency: any) => {
   return (
@@ -21,28 +22,32 @@ const OfferContainer = () => {
   const context = useContext(MainContent);
   const title = context[0].offer[0].title;
   const content = context[0].offer[0].content;
+
   return (
-    <section className={style['offer-container']}>
-      <h2>{title}</h2>
-      <div>
-        <Circle transparency={'0.5'} />
-      </div>
-      <div>
-        <Circle transparency={'0.25'} />
-        <Circle transparency={'0.5'} />
-      </div>
-      <div>
-        <Circle transparency={'0.05'} />
-        <Circle transparency={'0.25'} />
-        <Circle transparency={'0.5'} />
-      </div>
-      {content.map((items: any, i:number) => (
-        <div key={i}>
-          <h3>{items.title}</h3>
-          <div>{items.content}</div>
+    <>
+      <HeaderBox titel={context[0].offerTest.title} id={context[0].offerTest.id} />
+
+      <section className={style['offer-container']}>
+        <div>
+          <Circle transparency={'0.5'} />
         </div>
-      ))}
-    </section>
+        <div>
+          <Circle transparency={'0.25'} />
+          <Circle transparency={'0.5'} />
+        </div>
+        <div>
+          <Circle transparency={'0.05'} />
+          <Circle transparency={'0.25'} />
+          <Circle transparency={'0.5'} />
+        </div>
+        {content.map((items: any, i: number) => (
+          <div key={i}>
+            <h3>{items.title}</h3>
+            <div>{items.content}</div>
+          </div>
+        ))}
+      </section>
+    </>
   );
 };
 export default OfferContainer;
