@@ -1,12 +1,12 @@
-
-
-
-
-
-
-
-
-
+.about-container{
+margin: 8rem 4rem;
+display: flex;
+justify-content: center;
+gap: 5rem;
+img{
+    width: 80%;
+    max-width: 300px;
+}
 .first-line, .second-line{
     display: flex;
     justify-content: center;
@@ -29,7 +29,16 @@
     }
 }
 
+.about-content{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    max-width: 450px;
+    font-size: 16px;
+}
 
+}
 
 
 

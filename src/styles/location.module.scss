@@ -1,9 +1,29 @@
+
+.location-container{
+    display: flex;
+    gap: 3rem;
+    margin: 8rem 4rem;
+    div:first-of-type{
+        margin-bottom: 2rem;
+    }
+
+    p{
+        font-size: 16px;
+    }
+    h2{
+        font-size: 21px;
+    }
+}
+
+
 .google-map {
     height: 25rem;
     position: relative;
     width:  70%;
+    border: none;
 
     /* Macht Maps Grau/ Weiss */
+    -webkit-filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);

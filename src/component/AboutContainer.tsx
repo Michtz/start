@@ -25,7 +25,7 @@ const Header = () => {
 
 const AboutContent = () => {
   const context = useContext(MainContent);
-  return <div>{context[0].about.content}</div>;
+  return <div className={style['about-content']}>{context[0].about.content}</div>;
 };
 
 const AboutContainer = () => {
@@ -34,8 +34,15 @@ const AboutContainer = () => {
   return (
     <>
       <HeaderBox titel={content[0].about.title} id={content[0].about.id} />
-      <Header />
-      <AboutContent />
+      <div className={style['about-container']}>
+        <div>
+          <Header />
+          <AboutContent />
+        </div>
+        <div>
+          <img src="https://meinhof.ch/src/profilbild/bildJulius.jpg" />
+        </div>
+      </div>
     </>
   );
 };
