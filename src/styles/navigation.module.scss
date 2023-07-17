@@ -1,7 +1,6 @@
 .mainNav{
-display: flex;
-flex-direction: row-reverse;
-margin-right: 2rem;
+position: absolute;
+right: 1rem;
 
 div:first-child{
     top:2rem
@@ -10,6 +9,7 @@ div:first-child{
 .mainNavContent{
 display: flex;
 padding-top: 2rem;
+position: relative;
     a{
     color: white;
     text-decoration: none;
