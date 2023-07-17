@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MainContent } from './CreateContext';
 import style from '../styles/offerContainer.module.scss';
 import HeaderBox from './HeaderBox';
+import  styles2 from '../styles/main.module.scss';
 
 const Circle = (transparency: any) => {
   return (
@@ -24,7 +25,7 @@ const OfferContainer = () => {
   const content = context[0].offer[0].content;
 
   return (
-    <>
+    <div className={styles2["container"]}>
       <HeaderBox titel={context[0].offerTest.title} id={context[0].offerTest.id} />
 
       <section className={style['offer-container']}>
@@ -47,7 +48,7 @@ const OfferContainer = () => {
           </div>
         ))}
       </section>
-    </>
+    </div>
   );
 };
 export default OfferContainer;

@@ -15,6 +15,8 @@ const SliderContainer = () => {
   //     return () => clearInterval(interval);
   //   }, [content]);
 
+    
+    
   return (
     <div className={style['slider']}>
       {content.map((image, index) => (

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MainContent } from './CreateContext';
 import style from '../styles/about.module.scss';
 import HeaderBox from './HeaderBox';
+import styles2 from '../styles/main.module.scss';
 
 const Header = () => {
   return (
@@ -32,7 +33,7 @@ const AboutContainer = () => {
   const content = useContext(MainContent);
 
   return (
-    <>
+    <div className={styles2['container']}>
       <HeaderBox titel={content[0].about.title} id={content[0].about.id} />
       <div className={style['about-container']}>
         <div>
@@ -43,7 +44,7 @@ const AboutContainer = () => {
           <img src="https://meinhof.ch/src/profilbild/bildJulius.jpg" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default AboutContainer;

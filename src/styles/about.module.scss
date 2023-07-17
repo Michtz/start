@@ -5,12 +5,17 @@ justify-content: center;
 gap: 5rem;
 img{
     width: 80%;
-    max-width: 300px;
+    max-width: 350px;
 }
 .first-line, .second-line{
     display: flex;
     justify-content: center;
     word-spacing: 1%;
+
+
+
+
+
 
     h1{
         font-size: 400%;
@@ -20,22 +25,28 @@ img{
         display: flex;
         align-items: flex-end;
         padding-right: 5px;
+justify-content: flex-end;
+
 
     }
     h3{
         margin: 0;
         display: flex;
-        padding-top: 3.5%;
+        flex-direction: column;
+        padding-bottom: 2.5%;
+justify-content: flex-end;
+
     }
 }
 
 .about-content{
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 2rem auto;
     width: 80%;
-    max-width: 450px;
+    max-width: 550px;
     font-size: 16px;
+    line-height: 120%;
 }
 
 }

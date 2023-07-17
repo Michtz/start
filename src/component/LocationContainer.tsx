@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { MainContent } from './CreateContext';
 import style from '../styles/location.module.scss';
 import HeaderBox from './HeaderBox';
+import styles2 from '../styles/main.module.scss';
 
 const LocationContainer = () => {
   const content = useContext(MainContent);
 
   return (
-    <>
+    <div className={styles2['container']}>
       <HeaderBox titel={content[0].location.title} id={content[0].location.id} />
       <div className={style['location-container']}>
         <iframe
@@ -36,7 +37,7 @@ const LocationContainer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default LocationContainer;
