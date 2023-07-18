@@ -41,13 +41,15 @@ export const Menu = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   return (
     <nav className={style['mainNav']}>
-      <Hamburger
-        size={40}
-        easing="ease-in"
-        rounded
-        color="white"
-        onToggle={() => setMenuOpen(!menuOpen)}
-      />
+      <div>
+        <Hamburger
+          size={40}
+          easing="ease-in"
+          rounded
+          color="white"
+          onToggle={() => setMenuOpen(!menuOpen)}
+        />
+      </div>
       {menuOpen && <MenuContentMain />}
     </nav>
   );

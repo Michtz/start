@@ -12,6 +12,16 @@
     max-height: 120em;
     padding-bottom: 2rem;
 
+.arrow{
+    display: flex;
+    justify-content: center;
+    padding-bottom: -3rem;
+    padding-top: 3rem;
+    svg{
+        cursor: pointer;
+    }
+}
+
     img {
         display: flex;
         margin: auto;
