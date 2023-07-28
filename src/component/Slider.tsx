@@ -1,25 +1,35 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import style from '../styles/slider.module.scss';
 import { ClientsAndCustomers } from './CreateContext';
 
 const SliderContainer = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const content = useContext(ClientsAndCustomers);
-  console.log(content);
+  const content = useContext<any>(ClientsAndCustomers);
+  const [currentContent, setCurrentContent] = useState(content);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setActiveIndex((prevIndex) => (prevIndex === content.length - 1 ? 0 : prevIndex + 1));
-  //     }, 3000);
+  function moveLastItemToFront() {
+    setCurrentContent((prevContent: any) => {
+      const newContent = [...prevContent];
+      const lastItem = newContent.pop();
+      newContent.unshift(lastItem);
+      return newContent;
+    });
+  }
 
-  //     return () => clearInterval(interval);
-  //   }, [content]);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIsFadingOut(true);
+      setTimeout(() => {
+        moveLastItemToFront();
+        setIsFadingOut(false);
+      }, 100);
+    }, 4000);
+    return () => clearInterval(intervalId);
+  }, []);
 
-    
-    
   return (
-    <div className={style['slider']}>
-      {content.map((image, index) => (
+    <div className={`${style['slider']} ${isFadingOut ? 'fade-out' : ''}`}>
+      {currentContent.map((image: any, index: number) => (
         <div key={index}>
           <img src={image.src} alt={`Slide ${index + 1}`} />
         </div>
