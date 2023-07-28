@@ -3,7 +3,7 @@ import style from '../styles/homeHeader.module.scss';
 import DreieckComponent from './DreieckComponent';
 import { Menu } from './Menu';
 import { Link, Router } from 'react-router-dom';
-import { NavContent } from '../component/CreateContext';
+import { NavContent } from './CreateContextMain';
 
 const ArrowDown = () => {
   const context = useContext(NavContent);

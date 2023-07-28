@@ -3,18 +3,47 @@ import PictureTextContainerSlider from './PictureTextContainerSlider';
 import ProjectHeader from './ProjectHeader';
 import PictureTextContainer from './PictureTextContainer';
 
-const ContentContainer = (content: any) => {
-  const blog = content.content;
-  console.log(blog);
+
+
+interface Project {
+  text: string;
+  src: string;
+  src2?: string;
+}
+
+interface Head {
+  header: string;
+  src: string;
+  path: string;
+  art: string;
+  groese: string;
+  konzept: string;
+  etos: string;
+  anspruch: string[];
+}
+
+interface ProjectContentProps {
+  content: any;
+  head: Head;
+}
+
+
+const ProjectContentContainer: React.FC<ProjectContentProps> = ({ head, content }) => {
+  console.log(content);
   
   return (
     <div>
-      <ProjectHeader />
+      <ProjectHeader content={head} />
       <hr></hr>
-      <PictureTextContainer src={blog[0].src} text={blog[0].text} />
-      <PictureTextContainerSlider src={blog[1].src} src2={blog[1].src2} text={blog[1].text} />
-      <PictureTextContainerSlider src={blog[2].src} src2={blog[2].src2} text={blog[2].text} right />
+      <PictureTextContainer src={content[0].src} text={content[0].text} />
+      <PictureTextContainerSlider src={content[1].src} src2={content[1].src2} text={content[1].text} />
+      <PictureTextContainerSlider
+        src={content[2].src}
+        src2={content[2].src2}
+        text={content[2].text}
+        right
+      />
     </div>
   );
 };
-export default ContentContainer;
+export default ProjectContentContainer;

@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { MainContent } from './CreateContext';
+import { MainContent } from './CreateContextMain';
 import style from '../styles/navigation.module.scss';
 import Hamburger from 'hamburger-react';
 import { Link } from 'react-router-dom';
-import { Headers, NavContent } from '../component/CreateContext';
+import { Headers, NavContent } from './CreateContextMain';
 
 export const MenuContentProjects = () => {
   const context = useContext(Headers);
@@ -25,21 +25,23 @@ interface MenuContentMainProps {
 export const MenuContentMain: React.FC<MenuContentMainProps> = ({ menuOpen }) => {
   const context = useContext(NavContent);
 
-  return menuOpen 
-    ?  <div className={style['mainNavContentOpen']}>
-          {context.map((context: any, i: number) => (
-            <a key={i} href={context.path}>
-              {context.header}
-            </a>
-          ))}
-        </div>
-    : <div className={style['mainNavContent']}>
-          {context.map((context: any, i: number) => (
-            <a key={i} href={context.path}>
-              {context.header}
-            </a>
-          ))}
-      </div>
+  return menuOpen ? (
+    <div className={style['mainNavContentOpen']}>
+      {context.map((context: any, i: number) => (
+        <a key={i} href={context.path}>
+          {context.header}
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div className={style['mainNavContent']}>
+      {context.map((context: any, i: number) => (
+        <a key={i} href={context.path}>
+          {context.header}
+        </a>
+      ))}
+    </div>
+  );
 };
 /*
  ** Hamburger menu docs link: https://hamburger-react.netlify.app/

@@ -1,32 +1,46 @@
 import React from 'react';
 import style from '../styles/projectHead.module.scss';
+interface ProjectHeaderProps {
+  content: {
+    header: string;
+    src: string;
+    path: string;
+    art: string;
+    groese: string;
+    konzept: string;
+    etos: string;
+    anspruch: string[];
+  };
+}
+const ProjectHeader: React.FC<ProjectHeaderProps> = ({ content }) => {
+  console.log(content);
 
-const ProjectHeader = () => {
   return (
-    <div className={style['stichpunkte']}>
-      <h2 className={style['projektart']}>Projektart:</h2>
-      <p className={style['projektartText']}>Möblierung</p>
-
-      <h2 className={style['projektgrösse']}>Projektgrösse:</h2>
-      <p className={style['projektgrösseText']}>klein (0-50m2)</p>
-
-      <h2 className={style['designethos']}>Designethos:</h2>
-      <p className={style['designethosText']}>
-        Klare geometrische Form, Naturelle Materialien und Farben, Form folgt Funktion
-      </p>
-
-      <h2 className={style['konzept']}>Konzept:</h2>
-      <p className={style['konzeptText']}>Büro Dschungel</p>
-
-      <h2 className={style['ansprueche']}>Ansprüche:</h2>
-
-      <ul className={style['anspruecheText']}>
-        <li>Aufteilung in Büro/Atelier und Besprechungsraum</li>
-        <li>Platz für Muster, Material und Maschinen</li>
-        <li>Besprechungsraum Repräsentative Ausgestaltung</li>
-        <li>Ergonomische Ansprüche an den Arbeitsplatz</li>
-        <li>Akustische Massnahmen zum Dämpfen des Schalls</li>
-      </ul>
+    <div className={style['head-project-content']}>
+      <div>
+        <h2>Projektart:</h2>
+        <p>{content.art}</p>
+      </div>
+      <div>
+        <h2>Projektgrösse:</h2>
+        <p>{content.groese}</p>
+      </div>
+      <div>
+        <h2>Konzept:</h2>
+        <p>{content.konzept}</p>
+      </div>
+      <div>
+        <h2>Designethos:</h2>
+        <p>{content.etos}</p>
+      </div>
+      <div>
+        <h2>Ansprüche:</h2>
+        <ul>
+          {content.anspruch.map((content: string): JSX.Element => {
+            return <li>{content}</li>;
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ interface HeaderProps {
   header: string;
   src: string;
 }
-const HeaderContainer: React.FC<HeaderProps> = ({ header, src }) => {
+const HeaderContainerProjects: React.FC<HeaderProps> = ({ header, src }) => {
   return (
     <div>
       <div
@@ -27,4 +27,4 @@ const HeaderContainer: React.FC<HeaderProps> = ({ header, src }) => {
     </div>
   );
 };
-export default HeaderContainer;
+export default HeaderContainerProjects;

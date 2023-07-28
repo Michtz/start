@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import AboutContainer from '../component/AboutContainer';
-import { BlogContent } from '../component/CreateContext';
-import { Headers } from '../component/CreateContext';
+import { BlogContent } from '../component/CreateContextMain';
+import { Headers } from '../component/CreateContextMain';
 import DreieckComponent from '../component/DreieckComponent';
 import Footer from '../component/Footer';
 import HomeHeaderContainer from '../component/HomeHeaderContainer';

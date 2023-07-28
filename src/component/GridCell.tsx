@@ -34,7 +34,7 @@ const GridCell = (props: any) => {
           );
         }
       })}
-    </div>
+ </div>
   );
 };
 export default GridCell;

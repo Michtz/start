@@ -318,26 +318,109 @@ export const Headers = createContext([
   {
     header: 'Büro Horw',
     src: 'https://meinhof.ch/src/bueroHorw/bueroHorwTitelbildBlur.jpeg',
-    path: 'BueroHorw'
+    path: 'klein (0-50m2)',
+    art: 'Möblierung',
+    groese: 'klein (0-50m2)',
+    konzept: 'Büro Dschungel',
+    etos: 'Klare geometrische Form, Naturelle Materialien und Farben, Form folgt Funktion',
+    anspruch: [
+      'Aufteilung in Büro/Atelier und Besprechungsraum',
+      'Platz für Muster, Material und Maschinen',
+      'Besprechungsraum Repräsentative Ausgestaltung',
+      'Ergonomische Ansprüche an den Arbeitsplatz',
+      'Akustische Massnahmen zum Dämpfen des Schalls'
+    ]
   },
   {
     header: 'Büro Videolution',
     src: 'https://meinhof.ch/src/bueroVideolution/videolutionsTitelbildBlur.jpg',
-    path: 'BueroVideolution'
+    path: 'BueroVideolution',
+    art: 'Möblierung - Umbau - Sanierung',
+    groese: 'klein (0-50m2)',
+    konzept: 'Modernes Büro',
+    etos: 'Klare geometrische Form, Naturelle Materialien und Farben, Form folgt Funktion',
+    anspruch: [
+      'Aufteilung in Büro/Atelier und Besprechungsraum',
+      'Platz für Muster, Material und Maschinen',
+      'Besprechungsraum Repräsentative Ausgestaltung',
+      'Ergonomische Ansprüche an Arbeitsplatz',
+      'Akustische Massnahme zum Dämpfen des Schalls'
+    ]
   },
   {
     header: 'Puristisches Badezimmer',
     src: '	https://meinhof.ch/src/puristischesBadezimmer/badezimmerOg01TitelbildBlur.jpg',
-    path: 'PuristischesBadezimmer'
+    path: 'PuristischesBadezimmer',
+    art: 'Sarnierung',
+    groese: 'klein (0-50m2)',
+    konzept: 'Das puristische Bad',
+    etos: 'Klare geometrische Form, Naturelle Materialien und Farben, Form folgt Funktion',
+    anspruch: [
+      'Minimaler Eingriff in die Grundsubstanz',
+      'Zeitloses und elegantes Design',
+      'Durchgezogene Designsprache',
+      'Modernisierung auf bestehenden Anschlüssen',
+      'Langlebige und pflegeleichte Materialien'
+    ]
   },
   {
     header: 'Studio Neubau',
     src: 'https://meinhof.ch/src/neubauStudio/titelbildProjectRoggwil.jpeg',
-    path: 'StudioNeubau'
+    path: 'StudioNeubau',
+    art: 'Anbau',
+    groese: 'mittel (50-100 m2)',
+    konzept: 'Regional Mediterran',
+    etos: 'Designethos: Biologische und regionale Materialien, bunte und warme Farben, Privatsphäre durch Verschachtelung',
+    anspruch: [
+      'Biologisch abbaubare Materialien',
+      'Denkmalschutz konform',
+      'Warme, heimelige Atmosphäre',
+      'Klare und einfache Geometrie',
+      'Unterbringung von Bad, Entre und Behandlungsraum'
+    ]
   },
   {
     header: 'Wohnung am See',
     src: 'https://meinhof.ch/src/wohnungAmSee/neuenburg02TitelbildBlur.jpg',
+    path: 'WohnungamSee',
+    art: 'Möblierung',
+    groese: 'mittel (50-100 m2)',
+    konzept: 'Strandwohnung am See',
+    etos: 'Modernes und futuristisches Design, frische, sommerliche Gestaltung, Gemütlichkeit',
+    anspruch: [
+      'Frisches neues Design',
+      'Farben im Spektrum Blau-Grau-Beige',
+      'Gemütlichkeit der Sitzmöbel',
+      'Multifunktionale Eigenschaften',
+      'Reduzierte Dekoration'
+    ]
+  }
+]);
+
+export const ProjectGrid = createContext([
+  {
+    header: 'Büro Horw',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelHorw.jpg',
+    path: 'BueroHorw'
+  },
+  {
+    header: 'Büro Videolution',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelVideolution.jpg',
+    path: 'BueroVideolution'
+  },
+  {
+    header: 'Puristisches Badezimmer',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelBadezimmer.jpg',
+    path: 'PuristischesBadezimmer'
+  },
+  {
+    header: 'Studio Neubau',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelRoggwil.jpg',
+    path: 'StudioNeubau'
+  },
+  {
+    header: 'Wohnung am See',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelNeuenburg.jpg',
     path: 'WohnungamSee'
   }
 ]);

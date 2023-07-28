@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import style from '../styles/slider.module.scss';
-import { ClientsAndCustomers } from './CreateContext';
+import { ClientsAndCustomers } from './CreateContextMain';
 
 const SliderContainer = () => {
   const content = useContext<any>(ClientsAndCustomers);

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MainContent } from './CreateContext';
+import { MainContent } from './CreateContextMain';
 import style from '../styles/about.module.scss';
 import HeaderBox from './HeaderBox';
 import styles2 from '../styles/main.module.scss';

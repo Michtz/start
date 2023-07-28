@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MainContent } from './CreateContext';
+import { MainContent } from './CreateContextMain';
 import style from '../styles/location.module.scss';
 import HeaderBox from './HeaderBox';
 import styles2 from '../styles/main.module.scss';
@@ -13,7 +13,7 @@ const LocationContainer = () => {
       <div className={style['location-container']}>
         <iframe
           className={style['google-map']}
-          style={ {filter: 'grayscale(100%)'} }
+          style={{ filter: 'grayscale(100%)' }}
           src="https://maps.google.com/maps?q=Horw%2C%20Grisigenstrasse%2012&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near"
           allowFullScreen
           loading="lazy"

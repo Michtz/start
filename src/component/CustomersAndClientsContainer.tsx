@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MainContent, Headers } from './CreateContext';
+import { MainContent, Headers } from './CreateContextMain';
 import style from '../styles/about.module.scss';
 import HeaderBox from './HeaderBox';
 import SliderContainer from './Slider';

@@ -18,9 +18,8 @@
 //   rules: {},
 // };
 
-
 {
-  "extends": [ "prettier", "plugin:@typescript-eslint/recommended"],
+  "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "rules": {
@@ -28,6 +27,8 @@
     "react/no-children-prop": "off",
     "react/display-name": "off",
     "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-explicit-any": "off",
 
     "@typescript-eslint/typedef": [
       "error",
@@ -45,7 +46,10 @@
       "warn",
       {
         "types": {
-          "object": { "message": "usage of object can be confusing due to the unknown key-type", "fixWith": "Record<any, any>" }
+          "object": {
+            "message": "usage of object can be confusing due to the unknown key-type",
+            "fixWith": "Record<any, any>"
+          }
         },
         "extendDefaults": true
       }
