@@ -342,6 +342,35 @@ export const Headers = createContext([
   }
 ]);
 
+export const Projects = createContext([
+  {
+    header: 'Büro Horw',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelHorw.jpg',
+    path: 'BueroHorw'
+  },
+  {
+    header: 'Studio Neubau',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelRoggwil.jpg',
+    path: 'StudioNeubau'
+  },
+
+  {
+    header: 'Wohnung am See',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelNeuenburg.jpg',
+    path: 'WohnungamSee'
+  },
+  {
+    header: 'Puristisches Badezimmer',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelBadezimmer.jpg',
+    path: 'PuristischesBadezimmer'
+  },
+  {
+    header: 'Büro Videolution',
+    src: 'https://meinhof.ch/src/zugeschnittenProject/titelVideolution.jpg',
+    path: 'BueroVideolution'
+  }
+]);
+
 export const NavContent = createContext([
   {
     header: 'Kontakt',
