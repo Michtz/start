@@ -1,17 +1,31 @@
 
 .location-container{
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     margin: 8rem 4rem;
+justify-content: center;
+
+.adress-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+    iframe{
+        max-width: 700px;
+    }
     div:first-of-type{
         margin-bottom: 2rem;
     }
 
     p{
-        font-size: 16px;
+        font-size: 14px;
     }
     h2{
-        font-size: 21px;
+        font-size: 24px;
+        margin: 0;
+        line-height: 18px;
+        text-transform: capitalize;
     }
 }
 
