@@ -1,19 +1,110 @@
-.mainNav{
-position: absolute;
-right: 1rem;
-
-div{
-    top:2rem;
-    
+.mainNav {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 1rem;
+  width: 300px;
+}
+div {
+  top: 2rem;
+  z-index: 3;
 }
 
-.mainNavContent{
-display: flex;
-padding-top: 2rem;
-position: relative;
-    a{
+.mainNavContent {
+  display: flex;
+  padding-top: 0.3rem;
+  position: relative;
+  transition: width 1s ease-in-out;
+  width: 0;
+
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+
+  a {
     color: white;
     text-decoration: none;
     cursor: pointer;
     margin: 0.7rem 2rem 0rem 0rem;
-}}}
+    animation: fadeOut 2s linear;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+  
+  }
+
+  a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    background: #ffffff;
+    transition: all 0.5s;
+    transform: translateX(0%);
+  }
+
+  a:hover::before {
+    width: 100%;
+  }
+}
+.mainNavContentOpen {
+  z-index: 1;
+  padding-top: 0.3rem;
+  position: relative;
+  display: flex;
+  width: 100px;
+  transition: width 1s ease-in-out;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0.7rem 2rem 0rem 0rem;
+    white-space: nowrap;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+  }
+
+  a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    background: #ffffff;
+    transition: all 0.5s;
+    transform: translateX(0%);
+  }
+
+  a:hover::before {
+    width: 100%;
+  }
+}

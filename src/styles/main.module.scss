@@ -1,33 +1,42 @@
-html{
-    padding: 0 1vw;
-    background-color: white;
-    scroll-behavior: smooth;
-
-   
+html {
+  padding: 0 1vw;
+  background-color: white;
+  scroll-behavior: smooth;
+  object-fit: cover;
 }
-.main{scrollbar-width: 0;}
-p{font-family: "raleway", sans-serif;}
-a{font-family: "raleway", sans-serif;}
-li{
-    font-family: "raleway", sans-serif;
-    list-style: none;
+.main {
+  scrollbar-width: 0;
 }
-        body{
-            font-family: 'raleway';
-            font-weight: 300;
-            background-color: #E5E5E5;
-            color: #7b7373;
-            margin: 0rem;
-            box-shadow: inset 0px 0px 49px 28px rgba(114, 109, 102, 0.154);
-        }
 
-                h1, h2, h3, h4{
-                    font-family: 'raleway', sans-serif;
-                    text-transform: uppercase;
-                    font-weight: 300;
-                }
+p {
+  font-family: 'raleway', sans-serif;
+}
+a {
+  font-family: 'raleway', sans-serif;
+}
+li {
+  font-family: 'raleway', sans-serif;
+  list-style: none;
+}
+body {
+  font-family: 'raleway';
+  font-weight: 300;
+  background-color: #e5e5e5;
+  color: #7b7373;
+  margin: 0rem;
+  box-shadow: inset 0px 0px 49px 28px rgba(114, 109, 102, 0.154);
+}
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
 
-                .container{
-                    margin: 6rem 4rem;
-                }
+.container {
+  margin: 6rem auto;
+  max-width: 1400px;
+}

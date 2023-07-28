@@ -375,7 +375,7 @@ export const NavContent = createContext([
   {
     header: 'Kontakt',
     src: '',
-    path: '#contact'
+    path: '#location'
   },
   {
     header: 'Über Uns',
