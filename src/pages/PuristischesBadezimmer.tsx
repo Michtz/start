@@ -3,7 +3,7 @@ import ContentContainer from '../component/ContentContainer';
 import { BlogContent } from '../component/CreateContext';
 import { Headers } from '../component/CreateContext';
 import Footer from '../component/Footer';
-import HeaderContainer from '../component/HeaderContainer';
+import HeaderContainer from '../component/ProjectHeaderContainer';
 import style from '../styles/main.module.scss';
 
 const PuristischesBadezimmer = () => {
@@ -12,7 +12,7 @@ const PuristischesBadezimmer = () => {
 
   return (
     <>
-      <HeaderContainer content={titel[2].header} />
+      <HeaderContainer header={titel[2].header} src={titel[2].src} />
       <main className={style['main']}>
         <ContentContainer content={blog[2].project} />
       </main>

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/projectHeader.module.scss';
+import style from '../styles/projectHead.module.scss';
 
 const ProjectHeader = () => {
   return (

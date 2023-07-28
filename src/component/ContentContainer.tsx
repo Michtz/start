@@ -5,6 +5,8 @@ import PictureTextContainer from './PictureTextContainer';
 
 const ContentContainer = (content: any) => {
   const blog = content.content;
+  console.log(blog);
+  
   return (
     <div>
       <ProjectHeader />

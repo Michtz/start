@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import style from '../styles/header.module.scss';
+import style from '../styles/homeHeader.module.scss';
 import DreieckComponent from './DreieckComponent';
 import { Menu } from './Menu';
 import { Link, Router } from 'react-router-dom';

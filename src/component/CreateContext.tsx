@@ -317,27 +317,27 @@ export const BlogContent = createContext([
 export const Headers = createContext([
   {
     header: 'Büro Horw',
-    src: 'https://meinhof.ch/src/zugeschnittenProject/titelHorw.jpg',
+    src: 'https://meinhof.ch/src/bueroHorw/bueroHorwTitelbildBlur.jpeg',
     path: 'BueroHorw'
   },
   {
     header: 'Büro Videolution',
-    src: 'https://meinhof.ch/src/zugeschnittenProject/titelVideolution.jpg',
+    src: 'https://meinhof.ch/src/bueroVideolution/videolutionsTitelbildBlur.jpg',
     path: 'BueroVideolution'
   },
   {
     header: 'Puristisches Badezimmer',
-    src: 'https://meinhof.ch/src/zugeschnittenProject/titelBadezimmer.jpg',
+    src: '	https://meinhof.ch/src/puristischesBadezimmer/badezimmerOg01TitelbildBlur.jpg',
     path: 'PuristischesBadezimmer'
   },
   {
     header: 'Studio Neubau',
-    src: 'https://meinhof.ch/src/zugeschnittenProject/titelRoggwil.jpg',
+    src: 'https://meinhof.ch/src/neubauStudio/titelbildProjectRoggwil.jpeg',
     path: 'StudioNeubau'
   },
   {
     header: 'Wohnung am See',
-    src: 'https://meinhof.ch/src/zugeschnittenProject/titelNeuenburg.jpg',
+    src: 'https://meinhof.ch/src/wohnungAmSee/neuenburg02TitelbildBlur.jpg',
     path: 'WohnungamSee'
   }
 ]);
