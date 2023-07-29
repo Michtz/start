@@ -13,29 +13,33 @@ div {
 
 .mainNavContent {
   display: flex;
-  padding-top: 0.3rem;
-  position: relative;
+  flex-flow: column;
   transition: width 1s ease-in-out;
   width: 0;
-
   overflow: hidden;
   position: absolute;
   right: 0;
+  padding-top: 50px;
 
   a {
+    padding-right: 1.5rem;
+    line-height: 40px;
     color: white;
     text-decoration: none;
+    text-align: end;
     cursor: pointer;
     margin: 0.7rem 2rem 0rem 0rem;
     animation: fadeOut 2s linear;
     overflow: hidden;
     white-space: nowrap;
+    background: linear-gradient(to right, rgba(255,255,255,0), 30%, rgba(80, 73, 73, 0.825));
   }
+
   @keyframes fadeOut {
     from {
       opacity: 1;
     }
-  
+
     to {
       opacity: 0;
     }
@@ -44,7 +48,6 @@ div {
   a {
     display: inline-block;
     position: relative;
-  
   }
 
   a::before {
@@ -63,33 +66,36 @@ div {
     width: 100%;
   }
 }
+
 .mainNavContentOpen {
   z-index: 1;
   padding-top: 0.3rem;
   position: relative;
   display: flex;
-  width: 100px;
+  flex-direction: column;
   transition: width 1s ease-in-out;
   width: 0;
   overflow: hidden;
   position: absolute;
   right: 0;
   width: 100%;
+  padding-top: 50px;
 
   a {
+    background: linear-gradient(to right, rgba(255,255,255,0), 30%, rgba(80, 73, 73, 0.825));
+    padding-right: 1.5rem;
+    line-height: 40px;
+    text-align: end;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
     color: white;
+    font-weight:  300;
     text-decoration: none;
     cursor: pointer;
     margin: 0.7rem 2rem 0rem 0rem;
     white-space: nowrap;
-  }
-
-  a {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: white;
-    overflow: hidden;
+    border-radius: 2px;
   }
 
   a::before {
@@ -98,10 +104,10 @@ div {
     width: 0%;
     height: 1px;
     bottom: 0;
-    left: 0%;
+    left: 40%;
     background: #ffffff;
-    transition: all 0.5s;
-    transform: translateX(0%);
+    transition: all 0.7s;
+    transform: translateX(-20%);
   }
 
   a:hover::before {

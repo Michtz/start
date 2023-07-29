@@ -22,11 +22,20 @@ const ArrowDown = () => {
   );
 };
 
-const HomeHeaderContainer = (content: any) => {
+interface HeaderProps {
+  content: any;
+  navContent: {
+    header: string;
+    src: string;
+    path: string;
+  }[];
+}
+
+const HomeHeaderContainer = ({ navContent, content }) => {
   return (
     <div>
       <div className={style['home-header-container']}>
-        <Menu />
+        <Menu navContent={navContent} />
         <Link to={'/'}>
           <img src="https://meinhof.ch/src/logo/meinhofLogoWeissID.png" />
         </Link>

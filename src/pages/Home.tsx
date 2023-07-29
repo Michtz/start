@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import AboutContainer from '../component/AboutContainer';
-import { BlogContent } from '../component/CreateContextMain';
+import { BlogContent, Projects } from '../component/CreateContextMain';
 import { Headers } from '../component/CreateContextMain';
 import DreieckComponent from '../component/DreieckComponent';
 import Footer from '../component/Footer';
@@ -14,10 +14,11 @@ const Home = () => {
   const blog = useContext(BlogContent);
   const titel = 'INTERIOR DESIGN WITH IDENTITY';
   const content = useContext(Headers);
+  const navContent = useContext(Projects);
 
   return (
     <>
-      <HomeHeaderContainer content={titel} />
+      <HomeHeaderContainer  navContent={navContent}  content={titel} />
       <ProjectContainer />
       <DreieckComponent />
       <OfferContainer />

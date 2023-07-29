@@ -1,21 +1,26 @@
 import React from 'react';
 import style from '../styles/projectHeader.module.scss';
 import DreieckComponent from './DreieckComponent';
-import { Menu, MenuContentMain } from './Menu';
+import { Menu } from './Menu';
 import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   header: string;
   src: string;
+  navContent: {
+    header: string;
+    src: string;
+    path: string;
+  }[];
 }
-const HeaderContainerProjects: React.FC<HeaderProps> = ({ header, src }) => {
+const HeaderContainerProjects: React.FC<HeaderProps> = ({ header, src, navContent }) => {
   return (
     <div>
       <div
         className={style['header-container']}
         style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
-        <Menu />
+        <Menu navContent={navContent} />
         <Link to={'/'}>
           <img src="https://meinhof.ch/src/logo/meinhofLogoWeissID.png" />
         </Link>

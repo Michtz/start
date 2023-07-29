@@ -20,35 +20,39 @@ export const MenuContentProjects = () => {
 
 interface MenuContentMainProps {
   menuOpen: boolean;
+  navContent: {
+    header: string;
+    src: string;
+    path: string;
+  }[];
 }
 
-export const MenuContentMain: React.FC<MenuContentMainProps> = ({ menuOpen }) => {
-  const context = useContext(NavContent);
-
+export const MenuContent: React.FC<MenuContentMainProps> = ({ menuOpen, navContent }) => {
   return menuOpen ? (
     <div className={style['mainNavContentOpen']}>
-      {context.map((context: any, i: number) => (
-        <a key={i} href={context.path}>
-          {context.header}
+      {navContent.map((obj: any, i: number) => (
+        <a key={i} href={obj.path}>
+          {obj.header}
         </a>
       ))}
     </div>
   ) : (
     <div className={style['mainNavContent']}>
-      {context.map((context: any, i: number) => (
-        <a key={i} href={context.path}>
-          {context.header}
+      {navContent.map((obj: any, i: number) => (
+        <a key={i} href={obj.path}>
+          {obj.header}
         </a>
       ))}
     </div>
   );
 };
+
 /*
  ** Hamburger menu docs link: https://hamburger-react.netlify.app/
  **
  */
-export const Menu = () => {
-  const context = useContext(MainContent);
+
+export const Menu = ({ navContent }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   return (
     <nav className={style['mainNav']}>
@@ -61,7 +65,7 @@ export const Menu = () => {
           onToggle={() => setMenuOpen(!menuOpen)}
         />
       </div>
-      <MenuContentMain menuOpen={menuOpen} />
+      <MenuContent navContent={navContent} menuOpen={menuOpen} />
     </nav>
   );
 };
