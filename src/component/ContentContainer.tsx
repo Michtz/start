@@ -3,8 +3,6 @@ import PictureTextContainerSlider from './PictureTextContainerSlider';
 import ProjectHeader from './ProjectHeader';
 import PictureTextContainer from './PictureTextContainer';
 
-
-
 interface Project {
   text: string;
   src: string;
@@ -27,10 +25,9 @@ interface ProjectContentProps {
   head: Head;
 }
 
-
 const ProjectContentContainer: React.FC<ProjectContentProps> = ({ head, content }) => {
   console.log(content);
-  
+
   return (
     <div>
       <ProjectHeader content={head} />

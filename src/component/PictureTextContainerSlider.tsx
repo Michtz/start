@@ -8,8 +8,11 @@ interface Props {
   right?: boolean;
 }
 
-const PictureTextContainerSlider: React.FC<Props> = (props: Props): JSX.Element => {
+const PictureTextContainerSlider: React.FC<Props> = ({ src, src2, text, right }): JSX.Element => {
   const [image, setImage] = useState(true);
+  console.log(text);
+
+  const firstLetter: string = text.charAt(0);
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,15 +22,15 @@ const PictureTextContainerSlider: React.FC<Props> = (props: Props): JSX.Element 
 
   return (
     <div className={style['contribution-container']}>
-      {props.right && (
+      {right && (
         <div className={style[`fade-in-out ${image ? 'show' : 'hide'}`]}>
-          <img className={style['projektbilder']} src={image ? props.src : props.src2} />
+          <img className={style['projektbilder']} src={image ? src : src2} />
         </div>
       )}
-      <p className={style['projektTextLinks']}>{props.text}</p>
-      {!props.right && (
+      <p className={style['projektTextLinks']}>{text}</p>
+      {!right && (
         <div className={style[`fade-in-out ${image ? 'show' : 'hide'}`]}>
-          <img className={style['projektbilder']} src={image ? props.src : props.src2} />
+          <img className={style['projektbilder']} src={image ? src : src2} />
         </div>
       )}
     </div>
