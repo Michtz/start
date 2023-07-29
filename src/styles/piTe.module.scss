@@ -9,37 +9,7 @@
   gap: 3vw;
 }
 
-.GanzesProjekt h2 {
-  text-align: center;
-  margin-bottom: -3%;
-  margin-top: 6%;
-}
-
-.fotoUndBeschrieb {
-  display: grid;
-  gap: 4%;
-  grid-template-columns: 1fr 13.5% 1fr;
-  margin: 5%;
-  margin-top: 8%;
-}
-
-.first {
-  margin-top: 2% !important;
-}
-
-.first img {
-  width: 100% !important;
-}
-
-.projektBilderBox {
-  width: 100%;
-  height: 540px;
-}
-.fade-in-out {
-  transition: opacity 0.8s ease-in-out;
-}
-
-.projektbilder {
+.projekt-pictures {
   width: 50vw;
   max-width: 800px;
   height: auto;
@@ -47,45 +17,11 @@
   box-shadow: -1px 5px 50px 24px rgba(112, 109, 105, 0.197);
 }
 
-.absolut {
-  position: absolute;
-}
-
-.fotoUndBeschrieb p::first-letter {
-  font-size: 200%;
-}
-
-.fotoUndBeschrieb p {
-  padding-top: 20%;
-  line-height: 140%;
-  letter-spacing: 1px;
-  align-items: center;
-}
-
-/* .fotoUndBeschrieb p:first-child:first-letter {
-                        float: left;
-                        font-size: 3em;
-                        line-height: .7;
-                        margin-right: .2em;
-                        margin-top: .19em;
-                        } */
-
-.projektTextLinks {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  display: block;
-}
-
-.projektTextLinks::first-letter {
+.projektText::first-letter {
   font-size: 160%;
   text-transform: capitalize;
   line-height: 1px;
   margin-left: -1px;
-}
-
-.projektTextRechts {
-  grid-column: 3/4;
-  grid-row: 1/2;
 }
 
 .hrLineDown {

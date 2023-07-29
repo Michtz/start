@@ -1,19 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import style from '../styles/piTe.module.scss';
+import { PictureModal, handleKeyDown, scrollControl } from './functions/function';
 
 interface Props {
-  src?: string | undefined;
-  text?: string;
-  right?: boolean;
+  src: string | undefined;
+  text: string;
 }
 
-const PictureTextContainer: React.FC<Props> = (props: Props): JSX.Element => {
+const PictureTextContainer: React.FC<Props> = ({ src, text }): JSX.Element => {
+  const [modal, setModal] = useState(false);
+  handleKeyDown(setModal);
+  scrollControl(modal, document);
+
   return (
     <div className={style['contribution-container']}>
-      <div className={style[`fade-in-out`]}>
-        <img className={style['projektbilder']} src={props.src} />
-      </div>
-      <p className={style['projektTextLinks']}>{props.text}</p>
+      <img className={style['projekt-pictures']} onClick={() => setModal(true)} src={src} />
+      <p className={style['projektText']}>{text}</p>
+      {modal && (
+        <div onClick={() => setModal(false)}>
+          <PictureModal image={src} />
+        </div>
+      )}
     </div>
   );
 };

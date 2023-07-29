@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import style from '../styles/piTe.module.scss';
+import { PictureModal, handleKeyDown, imgChanger, scrollControl } from './functions/function';
 
 interface Props {
   src?: string | undefined;
@@ -10,27 +11,32 @@ interface Props {
 
 const PictureTextContainerSlider: React.FC<Props> = ({ src, src2, text, right }): JSX.Element => {
   const [image, setImage] = useState(true);
-  console.log(text);
+  const [modal, setModal] = useState(false);
 
-  const firstLetter: string = text.charAt(0);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setImage(!image);
-    }, 4000);
-  });
+  handleKeyDown(setModal);
+  imgChanger(modal, setImage, image);
+  scrollControl(modal, document);
 
   return (
     <div className={style['contribution-container']}>
       {right && (
-        <div className={style[`fade-in-out ${image ? 'show' : 'hide'}`]}>
-          <img className={style['projektbilder']} src={image ? src : src2} />
-        </div>
+          <img
+            onClick={() => setModal(true)}
+            className={style['projekt-pictures']}
+            src={image ? src : src2}
+          />
       )}
-      <p className={style['projektTextLinks']}>{text}</p>
+      <p className={style['projektText']}>{text}</p>
       {!right && (
-        <div className={style[`fade-in-out ${image ? 'show' : 'hide'}`]}>
-          <img className={style['projektbilder']} src={image ? src : src2} />
+          <img
+            onClick={() => setModal(true)}
+            className={style['projekt-pictures']}
+            src={image ? src : src2}
+          />
+      )}
+      {modal && (
+        <div onClick={() => setModal(false)}>
+          <PictureModal image={image ? src : src2} />
         </div>
       )}
     </div>

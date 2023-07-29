@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import ProjectContentContainer from '../component/ContentContainer';
 import { BlogContent } from '../component/CreateContextMain';
 import { Headers } from '../component/CreateContextMain';
@@ -9,7 +9,9 @@ import style from '../styles/main.module.scss';
 const BueroHorw = () => {
   const blog = useContext(BlogContent);
   const titel = useContext(Headers);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HeaderContainer header={titel[0].header} src={titel[0].src} />

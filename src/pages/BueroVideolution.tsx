@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import ProjectContentContainer from '../component/ContentContainer';
 import { BlogContent } from '../component/CreateContextMain';
 import { Headers } from '../component/CreateContextMain';
@@ -10,6 +10,9 @@ const BueroVideolution = () => {
   const blog = useContext(BlogContent);
   const titel = useContext(Headers);
   console.log(blog[1].project);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HeaderContainer header={titel[1].header} src={titel[1].src} />
