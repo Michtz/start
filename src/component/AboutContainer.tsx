@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { MainContent } from './CreateContextMain';
 import style from '../styles/about.module.scss';
-import HeaderBox from './HeaderBox';
+import HeaderBox from './system/HeaderBox';
 import styles2 from '../styles/main.module.scss';
 
+// static component
 const Header = () => {
   return (
     <section className={style['offer-container']} id={'about'}>
@@ -24,21 +25,24 @@ const Header = () => {
   );
 };
 
-const AboutContent = () => {
-  const context = useContext(MainContent);
-  return <div className={style['about-content']}>{context[0].about.content}</div>;
+interface AboutContentProps {
+  title?: string;
+  content: string;
+  id?: string;
+}
+
+const AboutContent: React.FC<AboutContentProps> = ({ content }) => {
+  return <div className={style['about-content']}>{content}</div>;
 };
 
-const AboutContainer = () => {
-  const content = useContext(MainContent);
-
+const AboutContainer: React.FC<AboutContentProps> = ({ content, title, id }) => {
   return (
     <div className={styles2['container']}>
-      <HeaderBox titel={content[0].about.title} id={content[0].about.id} />
+      <HeaderBox title={title} id={id} />
       <div className={style['about-container']}>
         <div>
           <Header />
-          <AboutContent />
+          <AboutContent content={content} />
         </div>
         <div>
           <img src="https://meinhof.ch/src/profilbild/bildJulius.jpg" />

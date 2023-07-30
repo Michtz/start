@@ -3,6 +3,7 @@ import style from '../styles/projectHeader.module.scss';
 import DreieckComponent from './DreieckComponent';
 import { Menu } from './Menu';
 import { Link } from 'react-router-dom';
+import { Logo } from './SmallComponents';
 
 interface HeaderProps {
   header: string;
@@ -21,9 +22,7 @@ const HeaderContainerProjects: React.FC<HeaderProps> = ({ header, src, navConten
         style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <Menu navContent={navContent} />
-        <Link to={'/'}>
-          <img src="https://meinhof.ch/src/logo/meinhofLogoWeissID.png" />
-        </Link>
+        <Logo />
         <div className={style['header-text']}>
           <h1>{header}</h1>
         </div>

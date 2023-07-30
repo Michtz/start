@@ -4,6 +4,7 @@ import DreieckComponent from './DreieckComponent';
 import { Menu } from './Menu';
 import { Link, Router } from 'react-router-dom';
 import { NavContent } from './CreateContextMain';
+import { Logo } from './SmallComponents';
 
 const ArrowDown = () => {
   const context = useContext(NavContent);
@@ -36,9 +37,7 @@ const HomeHeaderContainer = ({ navContent, content }) => {
     <div>
       <div className={style['home-header-container']}>
         <Menu navContent={navContent} />
-        <Link to={'/'}>
-          <img src="https://meinhof.ch/src/logo/meinhofLogoWeissID.png" />
-        </Link>
+        <Logo />
         <div className={style['header-text']}>
           INTERIOR <br />
           DESIGN

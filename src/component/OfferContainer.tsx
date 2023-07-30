@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { MainContent } from './CreateContextMain';
 import style from '../styles/offerContainer.module.scss';
-import HeaderBox from './HeaderBox';
-import styles2 from '../styles/main.module.scss';
+import HeaderBox from './system/HeaderBox';
+import styles from '../styles/main.module.scss';
 
 const Circle = (transparency: any) => {
   return (
@@ -19,14 +19,19 @@ const Circle = (transparency: any) => {
   );
 };
 
-const OfferContainer = () => {
-  const context = useContext(MainContent);
-  const title = context[0].offer[0].title;
-  const content = context[0].offer[0].content;
+interface OfferContentProps {
+  title: string;
+  id: string;
+  content: {
+    title: string;
+    content: string;
+  }[];
+}
 
+const OfferContainer: React.FC<OfferContentProps> = ({ id, title, content }) => {
   return (
-    <div className={styles2['container']}>
-      <HeaderBox titel={context[0].offerTest.title} id={context[0].offerTest.id} />
+    <div className={styles['container']}>
+      <HeaderBox title={title} id={id} />
 
       <section className={style['offer-container']}>
         <div>
@@ -41,10 +46,10 @@ const OfferContainer = () => {
           <Circle transparency={'0.25'} />
           <Circle transparency={'0.5'} />
         </div>
-        {content.map((items: any, i: number) => (
+        {content.map((obj: any, i: number) => (
           <div key={i}>
-            <h3>{items.title}</h3>
-            <div>{items.content}</div>
+            <h3>{obj.title}</h3>
+            <div>{obj.content}</div>
           </div>
         ))}
       </section>

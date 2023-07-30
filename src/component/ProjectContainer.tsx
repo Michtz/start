@@ -1,18 +1,21 @@
 import React, { useContext } from 'react';
 import { MainContent, ProjectGrid } from './CreateContextMain';
-import style from '../styles/about.module.scss';
-import HeaderBox from './HeaderBox';
+import HeaderBox from './system/HeaderBox';
 import GridContainer from './GridContainer';
-import styles2 from '../styles/main.module.scss';
+import styles from '../styles/main.module.scss';
+import { ProjectProps } from './types';
 
-const ProjectContainer = () => {
-  const content = useContext(MainContent);
-  const projects = useContext(ProjectGrid);
+interface ProjectContainerProps {
+  id: string;
+  title: string;
+  content: ProjectProps[];
+}
 
+const ProjectContainer: React.FC<ProjectContainerProps> = ({ id, title, content }) => {
   return (
-    <div className={styles2['container']}>
-      <HeaderBox titel={content[0].project.title} id={content[0].project.id} />
-      <GridContainer content={projects} />
+    <div className={styles['container']}>
+      <HeaderBox title={title} id={id} />
+      <GridContainer content={content} />
     </div>
   );
 };

@@ -1,29 +1,30 @@
 import { createContext } from 'react';
+import { Interface } from 'readline';
 
+// MainContentProps at types
 export const MainContent = createContext([
   {
-    offer: [
-      {
-        title: 'Angebot',
-        content: [
-          {
-            title: 'Beratung',
-            content:
-              'Sie möchten Räumlichkeiten neu gestalten und brauchen Unterstützung? Wir beraten Sie gerne bei der Inneneinrichtung, der Farbwahl, der Raumgestaltung und vielem mehr.'
-          },
-          {
-            title: 'Konzept',
-            content:
-              'Sie wollen einen konkreten Gestaltungsvorschlag für ihre Innenräume? Wir veranschaulichen durch Moodboards, Visualisierungen (3D-Zeichnung) und Pläne die Neugestaltung ihrer Räumlichkeiten.'
-          },
-          {
-            title: 'Ausführung',
-            content:
-              'Sie bauen um oder Gestalten neu und wollen ihr gestalterisches Konzept detailgetreu umgesetzt wissen? Wir begleiten das Projekt von der Beratung über das Konzept, bis hin zur Schlüsselübergabe!'
-          }
-        ]
-      }
-    ],
+    offer: {
+      title: 'Angebot',
+      content: [
+        {
+          title: 'Beratung',
+          content:
+            'Sie möchten Räumlichkeiten neu gestalten und brauchen Unterstützung? Wir beraten Sie gerne bei der Inneneinrichtung, der Farbwahl, der Raumgestaltung und vielem mehr.'
+        },
+        {
+          title: 'Konzept',
+          content:
+            'Sie wollen einen konkreten Gestaltungsvorschlag für ihre Innenräume? Wir veranschaulichen durch Moodboards, Visualisierungen (3D-Zeichnung) und Pläne die Neugestaltung ihrer Räumlichkeiten.'
+        },
+        {
+          title: 'Ausführung',
+          content:
+            'Sie bauen um oder Gestalten neu und wollen ihr gestalterisches Konzept detailgetreu umgesetzt wissen? Wir begleiten das Projekt von der Beratung über das Konzept, bis hin zur Schlüsselübergabe!'
+        }
+      ],
+      id: 'offer'
+    },
     overUs: [
       {
         title: 'Über uns',
@@ -314,6 +315,17 @@ export const BlogContent = createContext([
   }
 ]);
 
+export interface HeaderProps {
+  header: string;
+  src: string;
+  path: string;
+  art: string;
+  groese: string;
+  konzept: string;
+  etos: string;
+  anspruch: string[];
+}
+
 export const Headers = createContext([
   {
     header: 'Büro Horw',
@@ -397,6 +409,7 @@ export const Headers = createContext([
   }
 ]);
 
+
 export const ProjectGrid = createContext([
   {
     header: 'Büro Horw',
@@ -425,6 +438,36 @@ export const ProjectGrid = createContext([
   }
 ]);
 
+// all Pics same size
+export const ProjectFlex = createContext([
+  {
+    header: 'Büro Horw',
+    src: 'https://meinhof.ch/src/bueroHorw/bueroHorwV01.jpg',
+    path: '/BueroHorw'
+  },
+  {
+    header: 'Büro Videolution',
+    src: 'https://meinhof.ch/src/bueroVideolution/videolutions01.jpg',
+    path: '/BueroVideolution'
+  },
+  {
+    header: 'Puristisches Badezimmer',
+    src: 'https://meinhof.ch/src/puristischesBadezimmer/puristischesBadezimmerOg01.jpg',
+    path: '/PuristischesBadezimmer'
+  },
+  {
+    header: 'Studio Neubau',
+    src: '	https://meinhof.ch/src/neubauStudio/projektRoggwil03.jpg',
+    path: '/StudioNeubau'
+  },
+  {
+    header: 'Wohnung am See',
+    src: 'https://meinhof.ch/src/wohnungAmSee/wohnungAmSee04.jpg',
+    path: '/WohnungamSee'
+  }
+]);
+
+// ProjectProps in types
 export const Projects = createContext([
   {
     header: 'Büro Horw',
@@ -472,6 +515,7 @@ export const NavContent = createContext([
   }
 ]);
 
+// ClientsProps in types
 export const ClientsAndCustomers = createContext([
   {
     name: 'Videolution',

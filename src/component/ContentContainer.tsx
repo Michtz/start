@@ -2,31 +2,14 @@ import React from 'react';
 import PictureTextContainerSlider from './PictureTextContainerSlider';
 import ProjectHeader from './ProjectHeader';
 import PictureTextContainer from './PictureTextContainer';
-
-interface Project {
-  text: string;
-  src: string;
-  src2?: string;
-}
-
-interface Head {
-  header: string;
-  src: string;
-  path: string;
-  art: string;
-  groese: string;
-  konzept: string;
-  etos: string;
-  anspruch: string[];
-}
+import { HeaderProps } from './CreateContextMain';
 
 interface ProjectContentProps {
   content: any;
-  head: Head;
+  head: HeaderProps;
 }
 
 const ProjectContentContainer: React.FC<ProjectContentProps> = ({ head, content }) => {
-
   return (
     <div>
       <ProjectHeader content={head} />

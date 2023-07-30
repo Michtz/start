@@ -1,0 +1,18 @@
+.logo {
+  margin: auto;
+  padding-top: 2rem;
+  width: fit-content;
+
+  img {
+    display: flex;
+    margin: auto;
+    padding-top: 3%;
+    cursor: pointer;
+    width: 220px;
+
+    &:hover {
+      width: 224px !important;
+      margin-bottom: -1.7px !important;
+    }
+  }
+}

@@ -1,18 +1,18 @@
-import React, { useContext } from 'react';
-import { MainContent, Headers } from './CreateContextMain';
-import style from '../styles/about.module.scss';
-import HeaderBox from './HeaderBox';
+import HeaderBox from './system/HeaderBox';
 import SliderContainer from './Slider';
-import styles2 from '../styles/main.module.scss';
+import styles from '../styles/main.module.scss';
 
-const CustomersAndClients = () => {
-  const content = useContext(MainContent);
-  const header = useContext(Headers);
+interface ClientsProps {
+  title: string;
+  src: string[];
+  id: string;
+}
 
+const CustomersAndClients: React.FC<ClientsProps> = ({ title, src, id }) => {
   return (
-    <div className={styles2['container']}>
-      <HeaderBox titel={content[0].customersAndClients.title} id={content[0].customersAndClients.id} />
-      <SliderContainer />
+    <div className={styles['container']}>
+      <HeaderBox title={title} id={id} />
+      <SliderContainer src={src} />
     </div>
   );
 };

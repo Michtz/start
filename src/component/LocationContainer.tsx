@@ -1,15 +1,17 @@
-import React, { useContext } from 'react';
-import { MainContent } from './CreateContextMain';
+import React from 'react';
 import style from '../styles/location.module.scss';
-import HeaderBox from './HeaderBox';
-import styles2 from '../styles/main.module.scss';
+import HeaderBox from './system/HeaderBox';
+import styles from '../styles/main.module.scss';
 
-const LocationContainer = () => {
-  const content = useContext(MainContent);
+interface HeaderBoxProps {
+  title: string;
+  id: string;
+}
 
+const LocationContainer: React.FC<HeaderBoxProps> = ({ id, title }) => {
   return (
-    <div className={styles2['container']}>
-      <HeaderBox titel={content[0].location.title} id={content[0].location.id} />
+    <div className={styles['container']}>
+      <HeaderBox title={title} id={id} />
       <div className={style['location-container']}>
         <iframe
           className={style['google-map']}
