@@ -2,7 +2,7 @@ import React from 'react';
 import PictureTextContainerSlider from '../system/PictureTextContainerSlider';
 import ProjectHeader from './TitleSectionProjectContentContainer';
 import PictureTextContainer from '../system/PictureTextContainer';
-import { HeaderProps } from '../CreateContextMain';
+import { HeaderProps } from '../types';
 
 interface ProjectContentProps {
   content: any;

@@ -41,3 +41,23 @@ export interface MainContentProps {
   customersAndClients: SectionProps;
   location: SectionProps;
 }
+
+
+export interface NavContent {
+    header: string;
+    src: string;
+    path: string;
+}
+  
+
+export interface HeaderProps {
+    header: string;
+    src: string;
+    path: string;
+    art: string;
+    groese: string;
+    konzept: string;
+    etos: string;
+    anspruch: string[];
+  }
+  

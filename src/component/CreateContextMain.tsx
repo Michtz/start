@@ -315,16 +315,6 @@ export const BlogContent = createContext([
   }
 ]);
 
-export interface HeaderProps {
-  header: string;
-  src: string;
-  path: string;
-  art: string;
-  groese: string;
-  konzept: string;
-  etos: string;
-  anspruch: string[];
-}
 
 export const Headers = createContext([
   {
