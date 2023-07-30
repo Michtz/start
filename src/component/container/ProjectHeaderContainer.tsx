@@ -1,9 +1,8 @@
 import React from 'react';
-import style from '../styles/projectHeader.module.scss';
-import DreieckComponent from './DreieckComponent';
-import { Menu } from './Menu';
-import { Link } from 'react-router-dom';
-import { Logo } from './SmallComponents';
+import style from '../../styles/projectHeader.module.scss';
+import DreieckComponent from '../system/DreieckComponent';
+import { Menu } from '../system/Menu';
+import { Logo } from '../system/SmallComponents';
 
 interface HeaderProps {
   header: string;
@@ -14,6 +13,7 @@ interface HeaderProps {
     path: string;
   }[];
 }
+
 const HeaderContainerProjects: React.FC<HeaderProps> = ({ header, src, navContent }) => {
   return (
     <div>

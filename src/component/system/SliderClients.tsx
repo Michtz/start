@@ -1,5 +1,5 @@
-import { useState, useEffect, useContext } from 'react';
-import style from '../styles/slider.module.scss';
+import { useState, useEffect } from 'react';
+import style from '../../styles/slider.module.scss';
 
 function moveLastItemToFront(setCurrentContent) {
   setCurrentContent((prevContent: any) => {

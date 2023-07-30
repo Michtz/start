@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/dreieck.module.scss';
+import style from '../../styles/dreieck.module.scss';
 
 const DreieckComponent = () => {
   return (

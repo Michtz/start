@@ -1,10 +1,9 @@
 import { useContext } from 'react';
-import style from '../styles/homeHeader.module.scss';
-import DreieckComponent from './DreieckComponent';
-import { Menu } from './Menu';
-import { Link, Router } from 'react-router-dom';
-import { NavContent } from './CreateContextMain';
-import { Logo } from './SmallComponents';
+import style from '../../styles/homeHeader.module.scss';
+import DreieckComponent from '../system/DreieckComponent';
+import { Menu } from '../system/Menu';
+import { NavContent } from '../CreateContextMain';
+import { Logo } from '../system/SmallComponents';
 
 const ArrowDown = () => {
   const context = useContext(NavContent);
@@ -23,16 +22,7 @@ const ArrowDown = () => {
   );
 };
 
-interface HeaderProps {
-  content: any;
-  navContent: {
-    header: string;
-    src: string;
-    path: string;
-  }[];
-}
-
-const HomeHeaderContainer = ({ navContent, content }) => {
+const HomeHeaderContainer = ({ navContent }) => {
   return (
     <div>
       <div className={style['home-header-container']}>

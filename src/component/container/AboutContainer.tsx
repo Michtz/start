@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-import { MainContent } from './CreateContextMain';
-import style from '../styles/about.module.scss';
-import HeaderBox from './system/HeaderBox';
-import styles2 from '../styles/main.module.scss';
+import React from 'react';
+import style from '../../styles/about.module.scss';
+import HeaderBox from '../system/HeaderBox';
+import styles2 from '../../styles/main.module.scss';
 
 // static component
 const Header = () => {

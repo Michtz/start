@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
-import { MainContent, ProjectGrid } from './CreateContextMain';
-import HeaderBox from './system/HeaderBox';
-import GridContainer from './GridContainer';
-import styles from '../styles/main.module.scss';
-import { ProjectProps } from './types';
+import React from 'react';
+import HeaderBox from '../system/HeaderBox';
+import GridContainer from '../system/GridContainer';
+import styles from '../../styles/main.module.scss';
+import { ProjectProps } from '../types';
 
 interface ProjectContainerProps {
   id: string;

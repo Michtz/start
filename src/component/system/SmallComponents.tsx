@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import style from '../styles/smallComponents.module.scss';
+import style from '../../styles/smallComponents.module.scss';
 
 export const Logo: React.FC = (): JSX.Element => {
   return (

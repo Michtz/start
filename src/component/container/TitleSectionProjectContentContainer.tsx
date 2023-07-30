@@ -1,5 +1,6 @@
 import React from 'react';
-import style from '../styles/projectHead.module.scss';
+import style from '../../styles/projectHead.module.scss';
+
 interface ProjectHeaderProps {
   content: {
     header: string;
@@ -12,9 +13,8 @@ interface ProjectHeaderProps {
     anspruch: string[];
   };
 }
-const ProjectHeader: React.FC<ProjectHeaderProps> = ({ content }) => {
-  console.log(content);
 
+const TitlesectionProjects: React.FC<ProjectHeaderProps> = ({ content }) => {
   return (
     <div className={style['head-project-content']}>
       <div>
@@ -44,4 +44,4 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ content }) => {
     </div>
   );
 };
-export default ProjectHeader;
+export default TitlesectionProjects;

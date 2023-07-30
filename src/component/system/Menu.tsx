@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { MainContent } from './CreateContextMain';
-import style from '../styles/navigation.module.scss';
+import { MainContent } from '../CreateContextMain';
+import style from '../../styles/navigation.module.scss';
 import Hamburger from 'hamburger-react';
 import { Link } from 'react-router-dom';
-import { Headers, NavContent } from './CreateContextMain';
+import { Headers, NavContent } from '../CreateContextMain';
 
 export const MenuContentProjects = () => {
   const context = useContext(Headers);

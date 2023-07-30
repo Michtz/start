@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import style from '../styles/piTe.module.scss';
-import { PictureModal, handleKeyDown, scrollControl } from './functions/function';
+import style from '../../styles/piTe.module.scss';
+import { PictureModal, handleKeyDown, scrollControl } from '../functions/function';
 
 interface Props {
   src: string | undefined;

@@ -1,8 +1,8 @@
 import React from 'react';
-import PictureTextContainerSlider from './PictureTextContainerSlider';
-import ProjectHeader from './ProjectHeader';
-import PictureTextContainer from './PictureTextContainer';
-import { HeaderProps } from './CreateContextMain';
+import PictureTextContainerSlider from '../system/PictureTextContainerSlider';
+import ProjectHeader from './TitleSectionProjectContentContainer';
+import PictureTextContainer from '../system/PictureTextContainer';
+import { HeaderProps } from '../CreateContextMain';
 
 interface ProjectContentProps {
   content: any;
@@ -13,7 +13,7 @@ const ProjectContentContainer: React.FC<ProjectContentProps> = ({ head, content 
   return (
     <div>
       <ProjectHeader content={head} />
-      <hr/>
+      <hr />
       <PictureTextContainer src={content[0].src} text={content[0].text} />
       <PictureTextContainerSlider src={content[1].src} src2={content[1].src2} text={content[1].text} />
       <PictureTextContainerSlider

@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
-import ProjectContentContainer from '../component/ContentContainer';
+import ProjectContentContainer from '../component/container/ContentContainer';
 import { BlogContent, ProjectFlex, Projects } from '../component/CreateContextMain';
 import { Headers } from '../component/CreateContextMain';
-import Footer from '../component/Footer';
-import HeaderContainer from '../component/ProjectHeaderContainer';
+import Footer from '../component/container/FooterContainer';
+import HeaderContainer from '../component/container/ProjectHeaderContainer';
 import style from '../styles/main.module.scss';
 import BottomNavigation from '../component/system/BottomNavigationProjectsContainer';
 export interface NavContent {

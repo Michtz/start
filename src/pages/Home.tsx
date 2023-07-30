@@ -1,18 +1,17 @@
 import { useContext } from 'react';
-import AboutContainer from '../component/AboutContainer';
+import AboutContainer from '../component/container/AboutContainer';
 import { ClientsAndCustomers, MainContent, ProjectGrid, Projects } from '../component/CreateContextMain';
-import DreieckComponent from '../component/DreieckComponent';
-import Footer from '../component/Footer';
-import HomeHeaderContainer from '../component/HomeHeaderContainer';
-import OfferContainer from '../component/OfferContainer';
-import ProjectContainer from '../component/ProjectContainer';
-import LocationContainer from '../component/LocationContainer';
-import CustomersAndClients from '../component/CustomersAndClientsContainer';
+import DreieckComponent from '../component/system/DreieckComponent';
+import Footer from '../component/container/FooterContainer';
+import HomeHeaderContainer from '../component/container/HomeHeaderContainer';
+import OfferContainer from '../component/container/OfferContainer';
+import ProjectContainer from '../component/container/ProjectContainer';
+import LocationContainer from '../component/container/LocationContainer';
+import CustomersAndClients from '../component/container/CustomersAndClientsContainer';
 import { ClientsProps } from '../component/types';
 
 const Home = () => {
   // ToDo Add Types
-  const titel = 'INTERIOR DESIGN WITH IDENTITY';
   const projects = useContext(Projects);
   const projectsGrid = useContext(ProjectGrid);
   const mainContent = useContext(MainContent);
@@ -21,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <HomeHeaderContainer navContent={projects} content={titel} />
+      <HomeHeaderContainer navContent={projects} />
       <ProjectContainer
         id={mainContent[0].project.id}
         title={mainContent[0].project.title}

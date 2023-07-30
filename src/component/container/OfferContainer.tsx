@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
-import { MainContent } from './CreateContextMain';
-import style from '../styles/offerContainer.module.scss';
-import HeaderBox from './system/HeaderBox';
-import styles from '../styles/main.module.scss';
+import React from 'react';
+import style from '../../styles/offerContainer.module.scss';
+import HeaderBox from '../system/HeaderBox';
+import styles from '../../styles/main.module.scss';
 
-const Circle = (transparency: any) => {
+type trans = {
+  transparency: string;
+};
+
+const Circle: React.FC<trans> = ({ transparency }) => {
   return (
     <svg height="68" width="68">
       <circle
@@ -13,7 +16,7 @@ const Circle = (transparency: any) => {
         r="30"
         stroke="#7B7373"
         strokeWidth="1.5"
-        fill={`rgba(123, 115, 115,${transparency.transparency}`}
+        fill={`rgba(123, 115, 115,${transparency}`}
       />
     </svg>
   );
@@ -32,7 +35,6 @@ const OfferContainer: React.FC<OfferContentProps> = ({ id, title, content }) => 
   return (
     <div className={styles['container']}>
       <HeaderBox title={title} id={id} />
-
       <section className={style['offer-container']}>
         <div>
           <Circle transparency={'0.5'} />
