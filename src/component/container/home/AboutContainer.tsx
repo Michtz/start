@@ -1,7 +1,7 @@
 import React from 'react';
-import style from '../../styles/about.module.scss';
-import HeaderBox from '../system/HeaderBox';
-import styles2 from '../../styles/main.module.scss';
+import style from '../../../styles/about.module.scss';
+import HeaderBox from '../../system/HeaderBox';
+import styles from '../../../styles/main.module.scss';
 
 // static component
 const Header = () => {
@@ -36,7 +36,7 @@ const AboutContent: React.FC<AboutContentProps> = ({ content }) => {
 
 const AboutContainer: React.FC<AboutContentProps> = ({ content, title, id }) => {
   return (
-    <div className={styles2['container']}>
+    <div className={styles['container']}>
       <HeaderBox title={title} id={id} />
       <div className={style['about-container']}>
         <div>

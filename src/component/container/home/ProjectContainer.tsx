@@ -1,8 +1,8 @@
 import React from 'react';
-import HeaderBox from '../system/HeaderBox';
-import GridContainer from '../system/GridContainer';
-import styles from '../../styles/main.module.scss';
-import { ProjectProps } from '../types';
+import HeaderBox from '../../system/HeaderBox';
+import GridContainer from '../../system/GridContainer';
+import styles from '../../../styles/main.module.scss';
+import { ProjectProps } from '../../types';
 
 interface ProjectContainerProps {
   id: string;

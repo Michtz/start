@@ -1,8 +1,8 @@
 import React from 'react';
-import style from '../../styles/projectHeader.module.scss';
-import DreieckComponent from '../system/DreieckComponent';
-import { Menu } from '../system/Menu';
-import { Logo } from '../system/SmallComponents';
+import style from '../../../styles/projectHeader.module.scss';
+import DreieckComponent from '../../system/DreieckComponent';
+import { Menu } from '../../system/Menu';
+import { Logo } from '../../system/SmallComponents';
 
 interface HeaderProps {
   header: string;

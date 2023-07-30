@@ -1,6 +1,7 @@
 import React from 'react';
 import style from '../../styles/footer.module.scss';
 
+// Todo Make the real react (old code from html only site)
 const Footer = () => {
   return (
     <footer className={style['footer']}>
@@ -21,7 +22,6 @@ const Footer = () => {
           <img src="https://meinhof.ch/src/icons/mailIcon2.png" />
         </a>
       </div>
-
       <div className={style['copyright']}>
         <p>
           Copyright <script>document.write(new Date().getFullYear());</script> &copy All rights Reserved,

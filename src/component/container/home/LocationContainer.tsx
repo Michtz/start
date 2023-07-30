@@ -1,7 +1,7 @@
 import React from 'react';
-import style from '../../styles/location.module.scss';
-import HeaderBox from '../system/HeaderBox';
-import styles from '../../styles/main.module.scss';
+import style from '../../../styles/location.module.scss';
+import HeaderBox from '../../system/HeaderBox';
+import styles from '../../../styles/main.module.scss';
 
 interface HeaderBoxProps {
   title: string;

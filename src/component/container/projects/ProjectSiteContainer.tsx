@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from 'react';
-import ProjectContentContainer from '../container/ContentContainer';
-import { BlogContent, ProjectFlex, Projects } from '../CreateContextMain';
-import { Headers } from '../CreateContextMain';
-import Footer from '../container/FooterContainer';
-import HeaderContainer from '../container/ProjectHeaderContainer';
-import style from '../../styles/main.module.scss';
-import BottomNavigation from '../system/BottomNavigationProjectsContainer';
-import { HeaderProps, NavContent } from '../types';
+import ProjectContentContainer from './ContentContainer';
+import { BlogContent, ProjectFlex, Projects } from '../../CreateContextMain';
+import { Headers } from '../../CreateContextMain';
+import Footer from '../FooterContainer';
+import HeaderContainer from './ProjectHeaderContainer';
+import style from '../../../styles/main.module.scss';
+import BottomNavigation from '../../system/BottomNavigationProjectsContainer';
+import { HeaderProps, NavContent } from '../../types';
 
 type ProjectSiteProps = {
   index: number;

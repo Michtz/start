@@ -1,4 +1,4 @@
-import ProjectSiteContainer from '../component/container/ProjectSiteContainer';
+import ProjectSiteContainer from '../component/container/projects/ProjectSiteContainer';
 // Function to add a new projekt page
 const createProjectSite = (index: number) => () => <ProjectSiteContainer index={index} />;
 

@@ -1,13 +1,13 @@
 import { useContext } from 'react';
-import AboutContainer from '../component/container/AboutContainer';
+import AboutContainer from '../component/container/home/AboutContainer';
 import { ClientsAndCustomers, MainContent, ProjectGrid, Projects } from '../component/CreateContextMain';
 import DreieckComponent from '../component/system/DreieckComponent';
 import Footer from '../component/container/FooterContainer';
-import HomeHeaderContainer from '../component/container/HomeHeaderContainer';
-import OfferContainer from '../component/container/OfferContainer';
-import ProjectContainer from '../component/container/ProjectContainer';
-import LocationContainer from '../component/container/LocationContainer';
-import CustomersAndClients from '../component/container/CustomersAndClientsContainer';
+import HomeHeaderContainer from '../component/container/home/HomeHeaderContainer';
+import OfferContainer from '../component/container/home/OfferContainer';
+import ProjectContainer from '../component/container/home/ProjectContainer';
+import LocationContainer from '../component/container/home/LocationContainer';
+import CustomersAndClients from '../component/container/home/CustomersAndClientsContainer';
 import { ClientsProps } from '../component/types';
 
 const Home = () => {

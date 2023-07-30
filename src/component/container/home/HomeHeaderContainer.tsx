@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import style from '../../styles/homeHeader.module.scss';
-import DreieckComponent from '../system/DreieckComponent';
-import { Menu } from '../system/Menu';
-import { NavContent } from '../CreateContextMain';
-import { Logo } from '../system/SmallComponents';
+import style from '../../../styles/homeHeader.module.scss';
+import DreieckComponent from '../../system/DreieckComponent';
+import { Menu } from '../../system/Menu';
+import { NavContent } from '../../CreateContextMain';
+import { Logo } from '../../system/SmallComponents';
 
 const ArrowDown = () => {
   const context = useContext(NavContent);

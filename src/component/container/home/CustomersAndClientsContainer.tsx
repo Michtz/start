@@ -1,6 +1,6 @@
-import HeaderBox from '../system/HeaderBox';
-import SliderContainer from '../system/SliderClients';
-import styles from '../../styles/main.module.scss';
+import HeaderBox from '../../system/HeaderBox';
+import SliderContainer from '../../system/SliderClients';
+import styles from '../../../styles/main.module.scss';
 
 interface ClientsProps {
   title: string;

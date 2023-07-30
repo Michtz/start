@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/projectHead.module.scss';
+import style from '../../../styles/projectHead.module.scss';
 
 interface ProjectHeaderProps {
   content: {
@@ -16,7 +16,7 @@ interface ProjectHeaderProps {
 
 const TitlesectionProjects: React.FC<ProjectHeaderProps> = ({ content }) => {
   return (
-    <div className={style['head-project-content']}>
+    <div className={style['head-project-content']} >
       <div>
         <h2>Projektart:</h2>
         <p>{content.art}</p>
@@ -36,8 +36,8 @@ const TitlesectionProjects: React.FC<ProjectHeaderProps> = ({ content }) => {
       <div>
         <h2>Ansprüche:</h2>
         <ul>
-          {content.anspruch.map((content: string): JSX.Element => {
-            return <li>{content}</li>;
+          {content.anspruch.map((content: string, index:number): JSX.Element => {
+            return <li key={index}>{content}</li>;
           })}
         </ul>
       </div>
