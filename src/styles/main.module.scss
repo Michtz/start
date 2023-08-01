@@ -1,8 +1,8 @@
 html {
-  padding: 0 1vw;
   background-color: white;
   scroll-behavior: smooth;
   object-fit: cover;
+  overflow-x: hidden;
 }
 .main {
   scrollbar-width: 0;
@@ -18,13 +18,17 @@ li {
   font-family: 'raleway', sans-serif;
   list-style: none;
 }
+
 body {
+  margin: 0;
+  padding: 0 calc(1vw - 10px) 0 1vw;
+  background-color: #ffffff;
+
   font-family: 'raleway';
   font-weight: 300;
-  background-color: #e5e5e5;
+
   color: #7b7373;
   margin: 0rem;
-  box-shadow: inset 0px 0px 49px 28px rgba(114, 109, 102, 0.154);
 }
 
 h1,
@@ -35,7 +39,7 @@ h4 {
   text-transform: uppercase;
   font-weight: 300;
 }
-hr{
+hr {
   color: #ffffff !important;
   border-color: white;
   width: 90%;

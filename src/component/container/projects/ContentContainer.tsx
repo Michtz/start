@@ -10,6 +10,8 @@ interface ProjectContentProps {
 }
 
 const ProjectContentContainer: React.FC<ProjectContentProps> = ({ head, content }) => {
+  console.log(content);
+  
   return (
     <div>
       <ProjectHeader content={head} />

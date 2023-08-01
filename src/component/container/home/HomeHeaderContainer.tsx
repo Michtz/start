@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import style from '../../../styles/homeHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
@@ -23,9 +23,33 @@ const ArrowDown = () => {
 };
 
 const HomeHeaderContainer = ({ navContent }) => {
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let scrollTimeout;
+
+    const onScroll = () => {
+      headerRef.current.classList.add('remove-padding');
+
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        headerRef.current.classList.remove('remove-padding');
+      }, 2000);
+    };
+
+    document.addEventListener('scroll', onScroll);
+
+    // Clean up function
+    return () => {
+      document.removeEventListener('scroll', onScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []); // Empty array means this effect runs once on mount and clean up on unmount
+
   return (
     <div>
-      <div className={style['home-header-container']}>
+      <div ref={headerRef} className={style['home-header-container']}>
         <Menu navContent={navContent} />
         <Logo />
         <div className={style['header-text']}>

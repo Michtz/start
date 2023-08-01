@@ -11,6 +11,7 @@ import CustomersAndClients from '../component/container/home/CustomersAndClients
 import { ClientsProps } from '../component/types';
 import { MainContentEnglisch } from '../CreateContent/en/content/CreateContext.EN';
 import { ClientsAndCustomers } from '../CreateContent/de/assets/assets';
+import { ScrolbarRemover } from '../component/functions/function';
 
 const Home = () => {
   // ToDo Add Types
@@ -23,6 +24,8 @@ const Home = () => {
 
   const clients = useContext<ClientsProps[]>(ClientsAndCustomers);
   const customerContent = clients?.map((client) => client.src);
+
+  ScrolbarRemover();
 
   const [browserLanguage, setBrowserLanguage] = useState(navigator.language);
 
