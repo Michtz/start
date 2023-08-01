@@ -6,12 +6,12 @@ $primary-color: #ffffff;
   min-height: 545px;
   background-image: url('https://meinhof.ch/src/titelbilder/badehausBeleuchtet.jpg');
   background-position: center bottom;
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 -1vw;
   max-height: 120em;
   padding-bottom: 2rem;
+  width:100vw;
 
   .arrow {
     display: flex;

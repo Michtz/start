@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -19,10 +25,91 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <style>
-    ::-webkit-scrollbar {
-      width: 0px;
-    }
+      /* das ist ausschliesslich für die scrolbar */
+      ::-webkit-scrollbar {
+        width: 0px;
+        padding: 0;
+        border-radius: 5px;
+
+        position: absolute;
+        transition: 0.4s;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        width: 10px;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        width: 10px;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      ::selection {
+        background-color: rgb(168, 168, 160); /* Hintergrundfarbe des markierten Textes */
+        color: white; /* Farbe des markierten Textes */
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      /* Scrollbar sichtbar */
+      .show-scrollbar::-webkit-scrollbar {
+        width: 10px;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      .show-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      /* Scrollbar unsichtbar */
+      .hide-scrollbar::-webkit-scrollbar {
+        width: 0;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      .root {
+        background-color: #e5e5e5;
+        box-shadow: inset 0px 0px 49px 28px rgba(114, 109, 102, 0.154);
+      }
+
+      .add-padding {
+        padding: 0 1vw !important;
+      }
+
+      .remove-padding {
+        margin: 0 calc(1vw - 10px) 0 -1vw !important;
+      }
     </style>
+    <script>
+      let scrollTimeout;
+
+      document.addEventListener('scroll', function () {
+        document.body.classList.remove('hide-scrollbar');
+        document.body.classList.add('show-scrollbar');
+        document.body.classList.remove('add-padding');
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function () {
+          document.body.classList.remove('show-scrollbar');
+          document.body.classList.add('hide-scrollbar');
+          document.body.classList.add('add-padding');
+        }, 2000);
+      });
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -35,17 +122,6 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="root" id="root"></div>
   </body>
 </html>

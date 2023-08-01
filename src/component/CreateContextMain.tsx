@@ -192,7 +192,7 @@ export const BlogContent = createContext([
    Möbelhäusern (Tassen, Vase, Teppich ect.) eingesetzt. 
    Dabei ging es nicht Darum das Optimum oder die Perfekte 
    Serie zu zeigen sondern möglichst viele Unterschiede.`,
-        src: 'https://meinhof.ch/src/bueroVideolution/videolutions01.jpg',
+        src: 'https://meinhof.ch/src/bueroVideolution/videolutionsPlan.jpg',
         src2: 'https://meinhof.ch/src/bueroVideolution/videolutions01.jpg'
       },
       {
@@ -203,7 +203,7 @@ export const BlogContent = createContext([
    in verschiedenen Positionen zu ermöglichen. Die Materialien 
    sollen eine klare Verbindung zum Besprechungsraum aufweisen 
    und das Materialkonzept komplementieren.`,
-        src: 'https://meinhof.ch/src/bueroVideolution/videolutionsPlan.jpg',
+        src: 'https://meinhof.ch/src/bueroVideolution/videolutions01.jpg',
         src2: 'https://meinhof.ch/src/bueroVideolution/videolutionsPlan.jpg'
       }
     ]
@@ -315,7 +315,6 @@ export const BlogContent = createContext([
   }
 ]);
 
-
 export const Headers = createContext([
   {
     header: 'Büro Horw',
@@ -398,7 +397,6 @@ export const Headers = createContext([
     ]
   }
 ]);
-
 
 export const ProjectGrid = createContext([
   {

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import style from '../../styles/modal.module.scss';
 
-
 export const PictureModal = ({ image }) => {
   return (
     <div className={style['modal-container']}>
@@ -24,21 +23,25 @@ export function scrollDown(scrollingElement) {
 }
 
 export function scrollControl(modal, document) {
-    useEffect(() => {
-        const scrollingElement = document.documentElement;
-        if (modal) {
-          scrollUp(scrollingElement);
-        } else {
-          scrollDown(scrollingElement);
-        }
-      }, [modal]);
+  useEffect(() => {
+    const scrollingElement = document.documentElement;
+    if (modal) {
+      scrollUp(scrollingElement);
+    } else {
+      scrollDown(scrollingElement);
+    }
+  }, [modal]);
 }
 
-export function imgChanger(modal, setImage, image) {
+export function imgChanger(modal, setImage, image, setIsFading) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (!modal) {
+        setIsFading(true);
         setImage(!image);
+        setTimeout(() => {
+          setIsFading(false);
+        }, 500);
       }
     }, 4000);
     return () => {
@@ -61,8 +64,30 @@ export function handleKeyDown(setModal) {
   }, []);
 }
 
+// scrolbar remover
 
+export function ScrolbarRemover() {
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
 
+    const onScroll = () => {
+      document.body.classList.remove('hide-scrollbar');
+      document.body.classList.add('show-scrollbar');
 
+      clearTimeout(scrollTimeout);
 
+      scrollTimeout = setTimeout(() => {
+        document.body.classList.remove('show-scrollbar');
+        document.body.classList.add('hide-scrollbar');
+      }, 2000);
+    };
 
+    document.addEventListener('scroll', onScroll);
+
+    // Clean up function
+    return () => {
+      document.removeEventListener('scroll', onScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
+}

@@ -9,6 +9,7 @@ import ProjectContainer from '../component/container/home/ProjectContainer';
 import LocationContainer from '../component/container/home/LocationContainer';
 import CustomersAndClients from '../component/container/home/CustomersAndClientsContainer';
 import { ClientsProps } from '../component/types';
+import { ScrolbarRemover } from '../component/functions/function';
 
 const Home = () => {
   // ToDo Add Types
@@ -17,6 +18,8 @@ const Home = () => {
   const mainContent = useContext(MainContent);
   const clients = useContext<ClientsProps[]>(ClientsAndCustomers);
   const customerContent = clients?.map((client) => client.src);
+
+  ScrolbarRemover();
 
   return (
     <>
