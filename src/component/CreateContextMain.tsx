@@ -140,6 +140,144 @@ export const MainContent = createContext([
   }
 ]);
 
+export const MainContentEnglisch = createContext([
+  {
+    offer: {
+      title: 'Offer',
+      content: [
+        {
+          title: 'Consultation',
+          content:
+            'Would you like to redesign rooms and need support? We are happy to advise you on interior design, color choice, room layout, and much more.'
+        },
+        {
+          title: 'Concept',
+          content:
+            'Do you want a concrete design proposal for your interiors? We illustrate the redesign of your rooms through mood boards, visualizations (3D drawing), and plans.'
+        },
+        {
+          title: 'Implementation',
+          content:
+            'Are you remodeling or redesigning and want to have your design concept implemented in detail? We accompany the project from the consultation through the concept, right up to the key handover!'
+        }
+      ],
+      id: 'offer'
+    },
+    overUs: [
+      {
+        title: 'About us',
+        content: [
+          {
+            title: 'Consultation',
+            content:
+              'Would you like to redesign rooms and need support? We are happy to advise you on interior design, color choice, room layout, and much more.'
+          },
+          {
+            title: 'Concept',
+            content:
+              'Do you want a concrete design proposal for your interiors? We illustrate the redesign of your rooms through mood boards, visualizations (3D drawing), and plans.'
+          },
+          {
+            title: 'Implementation',
+            content:
+              'Are you remodeling or redesigning and want to have your design concept implemented in detail? We accompany the project from the consultation through the concept, right up to the key handover!'
+          }
+        ]
+      }
+    ],
+    about: {
+      title: 'About us',
+      content:
+        'We are Meinhof GmbH, an interior design office based in the canton of Lucerne. We advise, plan, and carry out renovation, furnishing, and redesign projects. With passion and great attention to detail, we realize your dream of new living space. We would be very happy to be contacted!',
+      id: 'about'
+    },
+    offerTest: {
+      title: 'Offer',
+      content: [
+        {
+          title: 'Consultation',
+          content:
+            'Would you like to redesign rooms and need support? We are happy to advise you on interior design, color choice, room layout, and much more.'
+        },
+        {
+          title: 'Concept',
+          content:
+            'Do you want a concrete design proposal for your interiors? We illustrate the redesign of your rooms through mood boards, visualizations (3D drawing), and plans.'
+        },
+        {
+          title: 'Implementation',
+          content:
+            'Are you remodeling or redesigning and want to have your design concept implemented in detail? We accompany the project from the consultation through the concept, right up to the key handover!'
+        }
+      ],
+      id: 'offer'
+    },
+    project: {
+      title: 'Projects',
+      content: [
+        {
+          title: 'Consultation',
+          content:
+            'Would you like to redesign rooms and need support? We are happy to advise you on interior design, color choice, room layout, and much more.'
+        },
+        {
+          title: 'Concept',
+          content:
+            'Do you want a concrete design proposal for your interiors? We illustrate the redesign of your rooms through mood boards, visualizations (3D drawing), and plans.'
+        },
+        {
+          title: 'Implementation',
+          content:
+            'Are you remodeling or redesigning and want to have your design concept implemented in detail? We accompany the project from the consultation through the concept, right up to the key handover!'
+        }
+      ],
+      id: 'projects'
+    },
+    customersAndClients: {
+      title: 'Customers and Partners',
+      content: [
+        {
+          title: 'Consultation',
+          content:
+            'Would you like to redesign rooms and need support? We are happy to advise you on interior design, color choice, room layout, and much more.'
+        },
+        {
+          title: 'Concept',
+          content:
+            'Do you want a concrete design proposal for your interiors? We illustrate the redesign of your rooms through mood boards, visualizations (3D drawing), and plans.'
+        },
+        {
+          title: 'Implementation',
+          content:
+            'Are you remodeling or redesigning and want to have your design concept implemented in detail? We accompany the project from the consultation through the concept, right up to the key handover!'
+        }
+      ],
+      id: 'customersAndClients'
+    },
+    location: {
+      title: 'Location',
+      content: [
+        {
+          title: 'Consultation',
+          content:
+            'Would you like to redesign rooms and need support? We are happy to advise you on interior design, color choice, room layout, and much more.'
+        },
+        {
+          title: 'Concept',
+          content:
+            'Do you want a concrete design proposal for your interiors? We illustrate the redesign of your rooms through mood boards, visualizations (3D drawing), and plans.'
+        },
+        {
+          title: 'Implementation',
+          content:
+            'Are you remodeling or redesigning and want to have your design concept implemented in detail? We accompany the project from the consultation through the concept, right up to the key handover!'
+        }
+      ],
+      id: 'location'
+    }
+  }
+]);
+
 export const BlogContent = createContext([
   // Buero Horw
   {
@@ -315,7 +453,6 @@ export const BlogContent = createContext([
   }
 ]);
 
-
 export const Headers = createContext([
   {
     header: 'Büro Horw',
@@ -398,7 +535,6 @@ export const Headers = createContext([
     ]
   }
 ]);
-
 
 export const ProjectGrid = createContext([
   {

@@ -1,6 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import AboutContainer from '../component/container/home/AboutContainer';
-import { ClientsAndCustomers, MainContent, ProjectGrid, Projects } from '../component/CreateContextMain';
+import {
+  ClientsAndCustomers,
+  MainContent,
+  MainContentEnglisch,
+  ProjectGrid,
+  Projects
+} from '../component/CreateContextMain';
 import DreieckComponent from '../component/system/DreieckComponent';
 import Footer from '../component/container/FooterContainer';
 import HomeHeaderContainer from '../component/container/home/HomeHeaderContainer';
@@ -14,9 +20,21 @@ const Home = () => {
   // ToDo Add Types
   const projects = useContext(Projects);
   const projectsGrid = useContext(ProjectGrid);
-  const mainContent = useContext(MainContent);
+  const mainContentEnglish = useContext(MainContentEnglisch);
+  const mainContentGerman = useContext(MainContent);
+
+  const [mainContent, setMainContet] = useState<any>(mainContentEnglish);
+
   const clients = useContext<ClientsProps[]>(ClientsAndCustomers);
   const customerContent = clients?.map((client) => client.src);
+  const [browserLanguage, setBrowserLanguage] = useState(navigator.language);
+
+  useEffect((): any => {
+    console.log('Browser-Sprache ist: ', browserLanguage);
+    if (browserLanguage.includes('de')) {
+      return setMainContet(mainContentGerman);
+    }
+  }, [navigator.language || browserLanguage]);
 
   return (
     <>
