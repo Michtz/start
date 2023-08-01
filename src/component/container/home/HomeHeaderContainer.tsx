@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef } from 'react';
 import style from '../../../styles/homeHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
-import { NavContent } from '../../CreateContextMain';
+import { NavContent } from '../../../CreateContent/de/content/CreateContext';
 import { Logo } from '../../system/SmallComponents';
 
 const ArrowDown = () => {
