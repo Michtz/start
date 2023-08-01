@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import ProjectContentContainer from './ContentContainer';
-import { BlogContent, ProjectFlex, Projects } from '../../CreateContextMain';
-import { Headers } from '../../CreateContextMain';
+import { BlogContent, ProjectFlex, Projects } from '../../../CreateContent/de/content/CreateContext';
+import { Headers } from '../../../CreateContent/de/content/CreateContext';
 import Footer from '../FooterContainer';
 import HeaderContainer from './ProjectHeaderContainer';
 import style from '../../../styles/main.module.scss';

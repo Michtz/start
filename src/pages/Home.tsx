@@ -1,12 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import AboutContainer from '../component/container/home/AboutContainer';
-import {
-  ClientsAndCustomers,
-  MainContent,
-  MainContentEnglisch,
-  ProjectGrid,
-  Projects
-} from '../component/CreateContextMain';
+import { MainContent, ProjectGrid, Projects } from '../CreateContent/de/content/CreateContext';
 import DreieckComponent from '../component/system/DreieckComponent';
 import Footer from '../component/container/FooterContainer';
 import HomeHeaderContainer from '../component/container/home/HomeHeaderContainer';
@@ -15,6 +9,8 @@ import ProjectContainer from '../component/container/home/ProjectContainer';
 import LocationContainer from '../component/container/home/LocationContainer';
 import CustomersAndClients from '../component/container/home/CustomersAndClientsContainer';
 import { ClientsProps } from '../component/types';
+import { MainContentEnglisch } from '../CreateContent/en/content/CreateContext.EN';
+import { ClientsAndCustomers } from '../CreateContent/de/assets/assets';
 
 const Home = () => {
   // ToDo Add Types
@@ -27,17 +23,21 @@ const Home = () => {
 
   const clients = useContext<ClientsProps[]>(ClientsAndCustomers);
   const customerContent = clients?.map((client) => client.src);
+
   const [browserLanguage, setBrowserLanguage] = useState(navigator.language);
 
   useEffect((): any => {
-    console.log('Browser-Sprache ist: ', browserLanguage);
     if (browserLanguage.includes('de')) {
       return setMainContet(mainContentGerman);
     }
-  }, [navigator.language || browserLanguage]);
+  }, [browserLanguage]);
+
+  const handleLanguageChange = () => {
+    setBrowserLanguage('de');
+  };
 
   return (
-    <>
+    <div onClick={handleLanguageChange}>
       <HomeHeaderContainer navContent={projects} />
       <ProjectContainer
         id={mainContent[0].project.id}
@@ -65,7 +65,7 @@ const Home = () => {
       <DreieckComponent />
       <LocationContainer id={mainContent[0].location.id} title={mainContent[0].location.title} />
       <Footer />
-    </>
+    </div>
   );
 };
 export default Home;
