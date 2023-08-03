@@ -21,18 +21,12 @@ $primary-color: #ffffff;
     svg {
       cursor: pointer;
     }
-  }
 
-  img {
-    display: flex;
-    margin: auto;
-    padding-top: 3%;
-    cursor: pointer;
-    width: 220px;
-
-    &:hover {
-      width: 224px !important;
-      margin-bottom: -1.7px !important;
+    & a:hover{
+      svg{
+        position: relative;
+        top: 2px;
+      }
     }
   }
 

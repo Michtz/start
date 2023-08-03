@@ -1,22 +1,18 @@
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import style from '../../../styles/homeHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
 import { NavContent } from '../../../CreateContent/de/content/CreateContext';
 import { Logo } from '../../system/SmallComponents';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const ArrowDown = () => {
   const context = useContext(NavContent);
+
   return (
     <div className={style['arrow']}>
       <a href={context[2].path}>
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-          <path
-            fill="white"
-            strokeLinejoin="round"
-            d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z"
-          />
-        </svg>
+        <KeyboardArrowDownIcon style={{ color: '#ffffff', fontSize: `40px`, borderRadius: "5px" }} />
       </a>
     </div>
   );
