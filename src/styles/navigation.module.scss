@@ -5,20 +5,21 @@
   flex-direction: row-reverse;
   padding: 0 1rem;
   width: 300px;
-  div {
+
+  div:first-of-type {
     top: 2rem;
     z-index: 3;
   }
 
   // Row Navigation
-
   .in-row-nav-content {
     display: flex;
-    transition: width 1s ease-in-out;
+    transition: width 1s linear;
     width: 0%;
     overflow: hidden;
     position: absolute;
     right: 0;
+    margin-top: 2rem;
 
     a {
       color: white;
@@ -33,7 +34,6 @@
       position: relative;
     }
 
-  
     a::before {
       content: '';
       position: absolute;
@@ -54,20 +54,19 @@
   .in-row-nav-content-open {
     z-index: 1;
     position: relative;
-    transition: width 1s ease-in-out;
+    transition: width 1s linear;
     width: 0;
     overflow: hidden;
     position: absolute;
     right: 0;
     width: 100%;
-
+    margin-top: 2rem;
     display: flex;
-    transition: width 1s ease-in-out;
 
     a {
       padding: 0px;
       line-height: 20px;
-    
+
       display: inline-block;
       position: relative;
       overflow: hidden;
@@ -82,7 +81,7 @@
       white-space: nowrap;
       border-radius: 2px;
 
-      // flex: 1 0 calc(33.333% - 10px); 
+      // flex: 1 0 calc(33.333% - 10px);
 
       display: inline-block;
       position: relative;
@@ -106,20 +105,21 @@
   }
 }
 
+// Nav Column
 .mainNavContent {
+  z-index: 1;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   transition: width 1s ease-in-out;
   width: 0;
   overflow: hidden;
-  position: absolute;
-  right: 0;
-  padding-top: 50px;
+  padding-top: 80px;
+  margin-right: -75px;
 
   a {
     padding-right: 1.5rem;
     line-height: 40px;
-    color: white;
+    color: rgb(54, 50, 50);
     text-decoration: none;
     text-align: end;
     cursor: pointer;
@@ -127,7 +127,7 @@
     animation: fadeOut 2s linear;
     overflow: hidden;
     white-space: nowrap;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), 30%, rgba(80, 73, 73, 0.825));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), 30%, rgba(239, 228, 228, 0.825));
   }
 
   a {
@@ -154,33 +154,32 @@
 
 .mainNavContentOpen {
   z-index: 1;
-  padding-top: 0.3rem;
-  position: relative;
   display: flex;
   flex-direction: column;
   transition: width 1s ease-in-out;
-  width: 0;
   overflow: hidden;
-  position: absolute;
-  right: 0;
+  padding-top: 80px;
+  margin-right: -75px;
   width: 100%;
-  padding-top: 50px;
 
   a {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), 30%, rgba(80, 73, 73, 0.825));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), 30%, rgba(239, 228, 228, 0.825));
     padding-right: 1.5rem;
     line-height: 40px;
     text-align: end;
     display: inline-block;
     position: relative;
     overflow: hidden;
-    color: white;
+    color: rgb(54, 50, 50);
     font-weight: 300;
     text-decoration: none;
     cursor: pointer;
     margin: 0.7rem 2rem 0rem 0rem;
     white-space: nowrap;
     border-radius: 2px;
+    &:hover{
+      font-weight: 500;
+    }
   }
 
   a::before {
@@ -189,17 +188,17 @@
     width: 0%;
     height: 1px;
     bottom: 0;
-    left: 40%;
-    background: #ffffff;
+    left: 90%;
+    background: rgb(54, 50, 50);
     transition: all 0.7s;
-    transform: translateX(-20%);
+    transform: translateX(-90%);
   }
 
   a:hover::before {
     width: 100%;
+
   }
 }
-
 
 @keyframes fadeOut {
   from {
@@ -210,4 +209,3 @@
     opacity: 0;
   }
 }
-
