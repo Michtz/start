@@ -5,11 +5,12 @@
   flex-direction: row-reverse;
   padding: 0 1rem;
   width: 300px;
+  div {
+    top: 2rem;
+    z-index: 3;
+  }
 }
-div {
-  top: 2rem;
-  z-index: 3;
-}
+
 
 .mainNavContent {
   display: flex;

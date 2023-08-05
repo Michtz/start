@@ -3,7 +3,7 @@ import style from '../../../styles/homeHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
 import { NavContent } from '../../../CreateContent/de/content/CreateContext';
-import { Logo } from '../../system/SmallComponents';
+import { Logo } from '../../system/Logo';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const ArrowDown = () => {
@@ -12,7 +12,7 @@ const ArrowDown = () => {
   return (
     <div className={style['arrow']}>
       <a href={context[2].path}>
-        <KeyboardArrowDownIcon style={{ color: '#ffffff', fontSize: `40px`, borderRadius: "5px" }} />
+        <KeyboardArrowDownIcon style={{ color: '#ffffff', fontSize: `40px`, borderRadius: '5px' }} />
       </a>
     </div>
   );

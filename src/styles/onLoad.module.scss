@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(53, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+.slide-up {
+    transform: translateY(-40vw);
+    animation-name: fadeOutOpacity;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+  }
+  
+  
+
+
+.logo {
+    position: absolute;
+    transition: 1s ease-in;
+  opacity: 1;
+  }
+
+  
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    color: rgb(224, 216, 216);
+}
+}
+
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+   
+  }
+  .loader-fade-out{
+    animation-name: fadeOut;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeOut {
+    0% {
+        background-color: rgb(53, 51, 51);
+    }
+    80%{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes fadeOutOpacity {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes SlideUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-40vw);
+    }
+}

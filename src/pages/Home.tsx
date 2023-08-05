@@ -12,6 +12,7 @@ import { ClientsProps } from '../component/types';
 import { MainContentEnglisch } from '../CreateContent/en/content/CreateContext.EN';
 import { ClientsAndCustomers } from '../CreateContent/de/assets/assets';
 import { ScrolbarRemover } from '../component/functions/function';
+import LoadingOverlay from '../component/functions/onLoadFunction';
 
 const Home = () => {
   // ToDo Add Types
@@ -41,6 +42,7 @@ const Home = () => {
 
   return (
     <div onClick={handleLanguageChange}>
+      <LoadingOverlay />
       <HomeHeaderContainer navContent={projects} />
       <ProjectContainer
         id={mainContent[0].project.id}
