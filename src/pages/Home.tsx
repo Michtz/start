@@ -1,6 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
 import AboutContainer from '../component/container/home/AboutContainer';
-import { MainContent, ProjectGrid, Projects } from '../CreateContent/de/content/CreateContext';
+import {
+  NavContent,
+  MainContent,
+  ProjectGrid,
+  Projects,
+} from '../CreateContent/de/content/CreateContext';
 import DreieckComponent from '../component/system/DreieckComponent';
 import Footer from '../component/container/FooterContainer';
 import HomeHeaderContainer from '../component/container/home/HomeHeaderContainer';
@@ -20,7 +25,7 @@ const Home = () => {
   const projectsGrid = useContext(ProjectGrid);
   const mainContentEnglish = useContext(MainContentEnglisch);
   const mainContentGerman = useContext(MainContent);
-
+  const navContent = useContext(NavContent);
   const [mainContent, setMainContet] = useState<any>(mainContentEnglish);
 
   const clients = useContext<ClientsProps[]>(ClientsAndCustomers);
@@ -43,7 +48,7 @@ const Home = () => {
   return (
     <div onClick={handleLanguageChange}>
       <LoadingOverlay />
-      <HomeHeaderContainer navContent={projects} />
+      <HomeHeaderContainer navContent={navContent} />
       <ProjectContainer
         id={mainContent[0].project.id}
         title={mainContent[0].project.title}

@@ -21,7 +21,7 @@ const HeaderContainerProjects: React.FC<HeaderProps> = ({ header, src, navConten
         className={style['header-container']}
         style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
-        <Menu navContent={navContent} />
+        <Menu navContent={navContent} column/>
         <Logo />
         <div className={style['header-text']}>
           <h1>{header}</h1>

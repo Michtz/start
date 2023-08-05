@@ -9,8 +9,102 @@
     top: 2rem;
     z-index: 3;
   }
-}
 
+  // Row Navigation
+
+  .in-row-nav-content {
+    display: flex;
+    transition: width 1s ease-in-out;
+    width: 0%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+      text-align: end;
+      cursor: pointer;
+      margin: 0.7rem 2rem 0rem 0rem;
+      animation: fadeOut 2s linear;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      position: relative;
+    }
+
+  
+    a::before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: 0;
+      left: 0%;
+      background: #ffffff;
+      transition: all 0.5s;
+      transform: translateX(0%);
+    }
+
+    a:hover::before {
+      width: 100%;
+    }
+  }
+
+  .in-row-nav-content-open {
+    z-index: 1;
+    position: relative;
+    transition: width 1s ease-in-out;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 100%;
+
+    display: flex;
+    transition: width 1s ease-in-out;
+
+    a {
+      padding: 0px;
+      line-height: 20px;
+    
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      font-weight: 300;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 0rem;
+
+      margin: 0.7rem 2rem 0rem 0rem;
+      margin-bottom: 20px;
+      white-space: nowrap;
+      border-radius: 2px;
+
+      // flex: 1 0 calc(33.333% - 10px); 
+
+      display: inline-block;
+      position: relative;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: 0;
+      left: 50%;
+      background: #ffffff;
+      transition: all 0.7s;
+      transform: translateX(-50%);
+    }
+
+    a:hover::before {
+      width: 100%;
+    }
+  }
+}
 
 .mainNavContent {
   display: flex;
@@ -33,17 +127,7 @@
     animation: fadeOut 2s linear;
     overflow: hidden;
     white-space: nowrap;
-    background: linear-gradient(to right, rgba(255,255,255,0), 30%, rgba(80, 73, 73, 0.825));
-  }
-
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), 30%, rgba(80, 73, 73, 0.825));
   }
 
   a {
@@ -83,7 +167,7 @@
   padding-top: 50px;
 
   a {
-    background: linear-gradient(to right, rgba(255,255,255,0), 30%, rgba(80, 73, 73, 0.825));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), 30%, rgba(80, 73, 73, 0.825));
     padding-right: 1.5rem;
     line-height: 40px;
     text-align: end;
@@ -91,7 +175,7 @@
     position: relative;
     overflow: hidden;
     color: white;
-    font-weight:  300;
+    font-weight: 300;
     text-decoration: none;
     cursor: pointer;
     margin: 0.7rem 2rem 0rem 0rem;
@@ -115,3 +199,15 @@
     width: 100%;
   }
 }
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
