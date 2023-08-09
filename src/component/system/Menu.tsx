@@ -64,6 +64,9 @@ export const MenuContentInRow: React.FC<MenuContentMainProps> = ({ menuOpen, nav
           {obj.header}
         </a>
       ))}
+       <a key={6} onClick={ ()=> handleLanguageChange(setBrowserLanguage);}>
+          DE/EN
+        </a>
     </div>
   );
 };

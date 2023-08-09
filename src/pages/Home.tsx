@@ -4,7 +4,7 @@ import {
   NavContent,
   MainContent,
   ProjectGrid,
-  Projects,
+  Projects
 } from '../CreateContent/de/content/CreateContext';
 import DreieckComponent from '../component/system/DreieckComponent';
 import Footer from '../component/container/FooterContainer';
@@ -19,6 +19,10 @@ import { ClientsAndCustomers } from '../CreateContent/de/assets/assets';
 import { ScrolbarRemover } from '../component/functions/function';
 import LoadingOverlay from '../component/functions/onLoadFunction';
 
+export function handleLanguageChange(setBrowserLanguage) {
+  setBrowserLanguage('de');
+}
+
 const Home = () => {
   // ToDo Add Types
   const projects = useContext(Projects);
@@ -26,27 +30,23 @@ const Home = () => {
   const mainContentEnglish = useContext(MainContentEnglisch);
   const mainContentGerman = useContext(MainContent);
   const navContent = useContext(NavContent);
-  const [mainContent, setMainContet] = useState<any>(mainContentEnglish);
-
   const clients = useContext<ClientsProps[]>(ClientsAndCustomers);
   const customerContent = clients?.map((client) => client.src);
 
-  ScrolbarRemover();
-
+  const [mainContent, setMainContet] = useState<any>(mainContentEnglish);
   const [browserLanguage, setBrowserLanguage] = useState(navigator.language);
 
+  ScrolbarRemover();
+  
   useEffect((): any => {
     if (browserLanguage.includes('de')) {
       return setMainContet(mainContentGerman);
     }
   }, [browserLanguage]);
 
-  const handleLanguageChange = () => {
-    setBrowserLanguage('de');
-  };
 
   return (
-    <div onClick={handleLanguageChange}>
+    <div>
       <LoadingOverlay />
       <HomeHeaderContainer navContent={navContent} />
       <ProjectContainer
