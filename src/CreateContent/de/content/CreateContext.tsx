@@ -502,3 +502,86 @@ export const NavContent = createContext([
     path: '#projects'
   }
 ]);
+
+export const NavContentLegal = createContext([
+  {
+    header: 'Impressum',
+    src: 'https://meinhof.ch/src/titelbilder/badehausBeleuchtet.jpg',
+    path: 'Impressum'
+  },
+  {
+    header: 'Datenschutz',
+    src: 'https://meinhof.ch/src/titelbilder/badehausBeleuchtet.jpg',
+    path: 'Datenschutz'
+  }
+]);
+
+export const ContentLegalDE = createContext({
+  impressum: [
+    {
+      header: 'WEBSEITENBETREIBER',
+      text: ['JULIUS MEINHOF, MEINHOF GMBH']
+    },
+    {
+      header: 'INFORMATIONEN ÜBER DAS UNTERNEHMEN',
+      text: [
+        'GESELLSCHAFT MIT BESCHRÄNKTER HAFTUNG (GMBH)',
+        'GRISIGENSTRASSE 12',
+        'HORW , 6048',
+        'E-MAIL: JULIUS@MEINHOF.CH',
+        '+41 (0)789715031'
+      ]
+    },
+    {
+      header: 'INFORMATIONEN ÜBER DIE UNTERNEHMENSREGISTRIERUNG',
+      text: ['CHE-239.220.789']
+    }
+  ],
+  datenschutz: [
+    {
+      header: 'Meinhof Innenarchitektur Datenschutzerklärung',
+      text: [
+        `In dieser Datenschutzerklärung wird beschrieben, wie Ihre personenbezogenen Daten 
+        erfasst, verwendet und weitergegeben werden, wenn Sie meinhof.ch nutzen oder dort 
+        etwas kaufen. Mit "personenbezogene Daten" in dieser Datenschutzerklärung bezeichnen 
+        wir sowohl Geräteinformationen als auch Bestellinformationen.`
+      ]
+    },
+    {
+      header: 'VERWENDEN WIR IHRE PERSONENBEZOGENEN DATEN?',
+      text: [
+        `Wir weisen Sie darauf hin, dass wir die Datenerfassungs- und -nutzungsverfahren 
+        unserer Website nicht ändern, wenn wir von Ihrem Browser ein "Do Not Track"-Signal erhalten.`
+      ]
+    },
+    {
+      header: 'DO NOT TRACK',
+      text: [
+        `Wir weisen Sie darauf hin, dass wir die Datenerfassungs- und -nutzungsverfahren unserer 
+        Website nicht ändern, wenn wir von Ihrem Browser ein "Do Not Track"-Signal erhalten.`
+      ]
+    },
+    {
+      header: 'IHRE RECHTE',
+      text: [
+        `Wenn Sie in Europa ansässig sind, haben Sie das Recht, auf die personenbezogenen Daten, 
+        die wir über Sie besitzen, zuzugreifen und deren Korrektur, Aktualisierung oder Löschung 
+        zu fordern. Wenn Sie dieses Recht ausüben möchten, setzen Sie sich über die nachstehenden 
+        Kontaktdaten mit uns in Verbindung. Wenn Sie in Europa ansässig sind, weisen wir außerdem 
+        darauf hin, dass wir Ihre Daten verarbeiten, um Verträge mit Ihnen zu erfüllen (z. B. wenn 
+          Sie über die Website eine Bestellung aufgeben) oder um unsere oben genannten berechtigten 
+          Geschäftsinteressen zu verfolgen. Bitte beachten Sie außerdem, dass Ihre Daten außerhalb 
+          von Europa, einschließlich Kanada und den Vereinigten Staaten, übertragen werden.`
+      ]
+    },
+    {
+      header: 'KONTAKT',
+      text: [
+        `Wenn Sie weitere Informationen zu unseren Datenschutzverfahren benötigen, Fragen haben 
+        oder eine Beschwerde einreichen möchten, kontaktieren Sie uns per E-Mail an julius@meinhof.ch
+        oder per Post an die unten genannte Adresse:`,
+        'Grisigenstrasse 12, Horw, Luzern, 6048, Schweiz'
+      ]
+    }
+  ]
+});

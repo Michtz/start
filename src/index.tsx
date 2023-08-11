@@ -10,6 +10,7 @@ import {
   WohnungAmSee
 } from './pages/Projects';
 import Home from './pages/Home';
+import { Datenschutz, Impressum } from './pages/Legal';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -22,6 +23,8 @@ root.render(
         <Route path="StudioNeubau" element={<StudioNeubau />} />
         <Route path="BueroVideolution" element={<BueroVideolution />} />
         <Route path="WohnungAmSee" element={<WohnungAmSee />} />
+        <Route path="Impressum" element={<Impressum />} />
+        <Route path="Datenschutz" element={<Datenschutz />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

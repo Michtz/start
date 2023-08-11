@@ -1,10 +1,14 @@
 import React from 'react';
 import style from '../../styles/footer.module.scss';
-
+import { Link } from 'react-router-dom';
+interface FooterProps {
+  fixed?: boolean;
+}
 // Todo Make the real react (old code from html only site)
-const Footer = () => {
+const Footer: React.FC<FooterProps> = ({ fixed }) => {
+  
   return (
-    <footer className={style['footer']}>
+    <footer className={style['footer']} data-fixed={fixed}>
       <div className={style['socialmedia']}>
         <a
           className={style['testt']}
@@ -30,11 +34,15 @@ const Footer = () => {
       </div>
       <div className={style['rechtliches']}>
         <div className={style['impressum']}>
-          <h3>Impressum</h3>
+          <Link to={'Impressum'}>
+            <h3>Impressum</h3>
+          </Link>
         </div>
 
         <div className={style['datenschutz']}>
-          <h3>Datenschutz</h3>
+          <Link to={'Datenschutz'}>
+            <h3>Datenschutz</h3>
+          </Link>
         </div>
       </div>
     </footer>

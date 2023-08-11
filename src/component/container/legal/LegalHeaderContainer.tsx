@@ -5,30 +5,33 @@ import { Menu } from '../../system/Menu';
 import { Logo } from '../../system/Logo';
 
 interface HeaderProps {
-  header: string;
-  src: string;
-  navContent: {
-    header: string;
-    src: string;
-    path: string;
+  title: string;
+  navContent?: {
+    header?: string;
+    src?: string;
+    path?: string;
   }[];
 }
 
-const ProjectHeaderContainer: React.FC<HeaderProps> = ({ header, src, navContent }) => {
+const LegalHeaderContainer: React.FC<HeaderProps> = ({ navContent, title }) => {
   return (
     <div>
       <div
         className={style['header-container']}
-        style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{
+          backgroundImage: `url(${navContent[0].src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
       >
         <Menu navContent={navContent} column />
         <Logo />
         <div className={style['header-text']}>
-          <h1>{header}</h1>
+          <h1>{title}</h1>
         </div>
       </div>
       <DreieckComponent />
     </div>
   );
 };
-export default ProjectHeaderContainer;
+export default LegalHeaderContainer;

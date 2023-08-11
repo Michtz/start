@@ -3,7 +3,7 @@ import ProjectContentContainer from './ContentContainer';
 import { BlogContent, ProjectFlex, Projects } from '../../../CreateContent/de/content/CreateContext';
 import { Headers } from '../../../CreateContent/de/content/CreateContext';
 import Footer from '../FooterContainer';
-import HeaderContainer from './ProjectHeaderContainer';
+import ProjectHeaderContainer from './ProjectHeaderContainer';
 import style from '../../../styles/main.module.scss';
 import BottomNavigation from '../../system/BottomNavigationProjectsContainer';
 import { HeaderProps, NavContent } from '../../types';
@@ -24,7 +24,7 @@ const ProjectSiteContainer: React.FC<ProjectSiteProps> = ({ index }) => {
 
   return (
     <>
-      <HeaderContainer navContent={navContent} header={titel[index].header} src={titel[index].src} />
+      <ProjectHeaderContainer navContent={navContent} header={titel[index].header} src={titel[index].src} />
       <main className={style['main']}>
         <ProjectContentContainer head={titel[index]} content={blog[index].project} />
         <hr />
