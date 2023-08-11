@@ -17,14 +17,14 @@ const LoadingOverlay: React.FC = () => {
       setTimeout(() => {
         setIsLoaded(true);
         remove();
-      }, 2500);
+      }, 1500);
     });
   }, []);
 
   const remove = () => {
     setTimeout(() => {
       return null;
-    }, 5000);
+    }, 10);
   };
 
   if (isLoaded) return null;
@@ -32,7 +32,7 @@ const LoadingOverlay: React.FC = () => {
   return (
     <div className={`${style.overlay} ${isFading ? style['fade-out'] : ''}`}>
       <div className={`${style.logo} ${isFading ? style['slide-up'] : ''}`}>
-        <Logo link={false}/>
+        <Logo link={false} />
         <div className={`${style.loader} ${isFading ? style['loader-fade-out'] : ''}`}>
           {!isFading && <CircularProgress color="inherit" />}
         </div>

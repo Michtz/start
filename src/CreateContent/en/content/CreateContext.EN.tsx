@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export const MainContentEnglisch = createContext([
+export const MainContentEN = createContext([
   {
     offer: {
       title: 'Offer',
@@ -138,7 +138,7 @@ export const MainContentEnglisch = createContext([
   }
 ]);
 
-export const BlogContent = createContext([
+export const BlogContentEN = createContext([
   // Buero Horw
   {
     project: [
@@ -269,7 +269,7 @@ export const BlogContent = createContext([
   }
 ]);
 
-export const ProjectGrid = createContext([
+export const ProjectGridEN = createContext([
   {
     header: 'Horw Office',
     src: 'https://meinhof.ch/src/zugeschnittenProject/titelHorw.jpg',
@@ -298,7 +298,7 @@ export const ProjectGrid = createContext([
 ]);
 
 // all Pics same size
-export const ProjectFlex = createContext([
+export const ProjectFlexEN = createContext([
   {
     header: 'Horw Office',
     src: 'https://meinhof.ch/src/bueroHorw/bueroHorwV01.jpg',
@@ -327,7 +327,7 @@ export const ProjectFlex = createContext([
 ]);
 
 // ProjectProps in types
-export const Projects = createContext([
+export const ProjectsEN = createContext([
   {
     header: 'Horw Office',
     src: 'https://meinhof.ch/src/zugeschnittenProject/titelHorw.jpg',
@@ -356,7 +356,7 @@ export const Projects = createContext([
   }
 ]);
 
-export const NavContent = createContext([
+export const NavContentEN = createContext([
   {
     header: 'Location',
     src: '',

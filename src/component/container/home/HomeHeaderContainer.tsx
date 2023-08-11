@@ -5,6 +5,7 @@ import { Menu } from '../../system/Menu';
 import { NavContent } from '../../../CreateContent/de/content/CreateContext';
 import { Logo } from '../../system/Logo';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { LangageButton } from '../../system/LanguageButton';
 
 const ArrowDown = () => {
   const context = useContext(NavContent);
@@ -18,9 +19,9 @@ const ArrowDown = () => {
   );
 };
 
-const HomeHeaderContainer = ({ navContent }) => {
+const HomeHeaderContainer = ({ currentLanguage, languageButton, navContent }) => {
   const headerRef = useRef<HTMLDivElement>(null);
-
+  const [language, setLanguage] = useState<'en' | 'de'>('en');
   useEffect(() => {
     let scrollTimeout;
 
@@ -43,9 +44,14 @@ const HomeHeaderContainer = ({ navContent }) => {
     };
   }, []); // Empty array means this effect runs once on mount and clean up on unmount
 
+  const toggleLanguage = () => {
+    setLanguage((prevLang) => (prevLang === 'en' ? 'de' : 'en'));
+  };
+
   return (
     <div>
       <div ref={headerRef} className={style['home-header-container']}>
+        <LangageButton currentLanguage={currentLanguage} toggleLanguage={languageButton} />
         <Menu navContent={navContent} />
         <Logo />
         <div className={style['header-text']}>

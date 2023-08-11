@@ -6,6 +6,7 @@ import {
   ProjectGrid,
   Projects
 } from '../CreateContent/de/content/CreateContext';
+
 import DreieckComponent from '../component/system/DreieckComponent';
 import Footer from '../component/container/FooterContainer';
 import HomeHeaderContainer from '../component/container/home/HomeHeaderContainer';
@@ -14,41 +15,66 @@ import ProjectContainer from '../component/container/home/ProjectContainer';
 import LocationContainer from '../component/container/home/LocationContainer';
 import CustomersAndClients from '../component/container/home/CustomersAndClientsContainer';
 import { ClientsProps } from '../component/types';
-import { MainContentEnglisch } from '../CreateContent/en/content/CreateContext.EN';
 import { ClientsAndCustomers } from '../CreateContent/de/assets/assets';
 import { ScrolbarRemover } from '../component/functions/function';
 import LoadingOverlay from '../component/functions/onLoadFunction';
+import { log } from 'console';
+import {
+  NavContentEN,
+  MainContentEN,
+  ProjectGridEN,
+  ProjectsEN
+} from '../CreateContent/en/content/CreateContext.EN';
 
 export function handleLanguageChange(setBrowserLanguage) {
   setBrowserLanguage('de');
 }
 
 const Home = () => {
-  // ToDo Add Types
-  const projects = useContext(Projects);
-  const projectsGrid = useContext(ProjectGrid);
-  const mainContentEnglish = useContext(MainContentEnglisch);
-  const mainContentGerman = useContext(MainContent);
-  const navContent = useContext(NavContent);
+ 
+  const projectsGridEN = useContext(ProjectGridEN);
+  const mainContentEN = useContext(MainContentEN);
+  const navContentEN = useContext(NavContentEN);
+
+  const projectsGridDE = useContext(ProjectGrid);
+  const mainContentDE = useContext(MainContent);
+  const navContentDE = useContext(NavContent);
+  
   const clients = useContext<ClientsProps[]>(ClientsAndCustomers);
   const customerContent = clients?.map((client) => client.src);
 
-  const [mainContent, setMainContet] = useState<any>(mainContentEnglish);
+  const [projectsGrid, setProjectsGrid] = useState<any>(projectsGridEN);
+  const [mainContent, setMainContet] = useState<any>(mainContentEN);
+  const [navContent, setNavContent] = useState<any>(navContentEN);
   const [browserLanguage, setBrowserLanguage] = useState(navigator.language);
-
   ScrolbarRemover();
-  
+
   useEffect((): any => {
     if (browserLanguage.includes('de')) {
-      return setMainContet(mainContentGerman);
+      setMainContet(mainContentDE);
+      setProjectsGrid(projectsGridDE);
+      setNavContent(navContentDE)
+    }
+
+    if (browserLanguage.includes('en')) {
+      setMainContet(mainContentEN);
+      setProjectsGrid(projectsGridEN);
+      setNavContent(navContentEN)
     }
   }, [browserLanguage]);
 
+  const toggleLanguage = () => {
+    setBrowserLanguage((prevLang) => (prevLang === 'en' ? 'de' : 'en'));
+  };
 
   return (
     <div>
       <LoadingOverlay />
-      <HomeHeaderContainer navContent={navContent} />
+      <HomeHeaderContainer
+        currentLanguage={browserLanguage}
+        languageButton={toggleLanguage}
+        navContent={navContent}
+      />
       <ProjectContainer
         id={mainContent[0].project.id}
         title={mainContent[0].project.title}

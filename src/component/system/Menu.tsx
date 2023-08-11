@@ -1,10 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import style from '../../styles/navigation.module.scss';
 import Hamburger from 'hamburger-react';
 import { Link } from 'react-router-dom';
 import { Headers } from '../../CreateContent/de/content/CreateContext';
+import { handleLanguageChange } from '../../pages/Home';
 
 export const MenuContentProjects = () => {
+ const langange = useRef()
   const context = useContext(Headers);
 
   return (
@@ -49,6 +51,7 @@ export const MenuContentColumn: React.FC<MenuContentMainProps> = ({ menuOpen, na
 
 // Row Nav
 export const MenuContentInRow: React.FC<MenuContentMainProps> = ({ menuOpen, navContent }) => {
+
   return menuOpen ? (
     <div className={style['in-row-nav-content-open']}>
       {navContent.map((obj: any, i: number) => (
@@ -64,9 +67,6 @@ export const MenuContentInRow: React.FC<MenuContentMainProps> = ({ menuOpen, nav
           {obj.header}
         </a>
       ))}
-       <a key={6} onClick={ ()=> handleLanguageChange(setBrowserLanguage);}>
-          DE/EN
-        </a>
     </div>
   );
 };
