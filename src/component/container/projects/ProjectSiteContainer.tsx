@@ -24,7 +24,11 @@ const ProjectSiteContainer: React.FC<ProjectSiteProps> = ({ index }) => {
 
   return (
     <>
-      <ProjectHeaderContainer navContent={navContent} header={titel[index].header} src={titel[index].src} />
+      <ProjectHeaderContainer
+        navContent={navContent}
+        header={titel[index].header}
+        src={titel[index].src}
+      />
       <main className={style['main']}>
         <ProjectContentContainer head={titel[index]} content={blog[index].project} />
         <hr />

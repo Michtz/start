@@ -1,12 +1,13 @@
 import React from 'react';
 import style from '../../styles/footer.module.scss';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../CreateContent/LanguageProvider';
 interface FooterProps {
   fixed?: boolean;
 }
 // Todo Make the real react (old code from html only site)
 const Footer: React.FC<FooterProps> = ({ fixed }) => {
-  
+  const { language } = useLanguage();
   return (
     <footer className={style['footer']} data-fixed={fixed}>
       <div className={style['socialmedia']}>
@@ -28,20 +29,20 @@ const Footer: React.FC<FooterProps> = ({ fixed }) => {
       </div>
       <div className={style['copyright']}>
         <p>
-          Copyright <script>document.write(new Date().getFullYear());</script> &copy All rights Reserved,
-          by Meinhof GmbH
+          Copyright <script>document.write(new Date().getFullYear());</script> &copy; All rights
+          Reserved, by Meinhof GmbH
         </p>
       </div>
       <div className={style['rechtliches']}>
         <div className={style['impressum']}>
-          <Link to={'Impressum'}>
-            <h3>Impressum</h3>
+          <Link to={'/imprint'}>
+            <h3>{language.imprint.title}</h3>
           </Link>
         </div>
 
         <div className={style['datenschutz']}>
-          <Link to={'Datenschutz'}>
-            <h3>Datenschutz</h3>
+          <Link to={'/privacy'}>
+            <h3>{language.privacy.title}</h3>
           </Link>
         </div>
       </div>

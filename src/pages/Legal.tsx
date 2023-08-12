@@ -1,20 +1,19 @@
-import React, { useContext } from 'react';
-import Container from '../component/system/Container';
-import { HeaderProps, NavContent } from '../component/types';
-import { ContentLegalDE, Headers, NavContentLegal } from '../CreateContent/de/content/CreateContext';
+import React from 'react';
+import Container from '../component/container/legal/Container';
+import { useLanguage } from '../CreateContent/LanguageProvider';
 
-export const Impressum: React.FC = () => {
-  const contentDE = useContext(ContentLegalDE);
-  const navContent = useContext(NavContentLegal);
-
-  return <Container navContent={navContent} content={contentDE.impressum} title={'Impressum'}/>;
+type LegalProps = {
+  type: 'imprint' | 'privacy';
 };
 
-export const Datenschutz: React.FC = () => {
-  const contentDE = useContext(ContentLegalDE);
-  const navContent = useContext(NavContentLegal);
+const LegalPage: React.FC<LegalProps> = ({ type }) => {
+  const { language } = useLanguage();
+  const content = language[type];
 
-  return <Container navContent={navContent} content={contentDE.datenschutz} title={'Datenschutz'} />;
+  return (
+    <Container navContent={language.navigations.legal} content={content.content} title={content.title} />
+  );
 };
 
-
+export const Impressum: React.FC = () => <LegalPage type="imprint" />;
+export const Datenschutz: React.FC = () => <LegalPage type="privacy" />;

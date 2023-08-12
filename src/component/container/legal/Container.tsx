@@ -1,7 +1,7 @@
-import LegalHeaderContainer from '../container/legal/LegalHeaderContainer';
-import LegalContentContainer from '../container/legal/LegalContentContainer';
-import Footer from '../container/FooterContainer';
-import style from '../../styles/legal.module.scss';
+import LegalHeaderContainer from './LegalHeaderContainer';
+import LegalContentContainer from './LegalContentContainer';
+import Footer from '../FooterContainer';
+import style from '../../../styles/legal.module.scss';
 
 interface ContainerProps {
   title: string;

@@ -3,7 +3,7 @@ import style from '../../styles/navigation.module.scss';
 import Hamburger from 'hamburger-react';
 import { Link } from 'react-router-dom';
 import { Headers } from '../../CreateContent/de/content/CreateContext';
-import { handleLanguageChange } from '../../pages/Home';
+
 
 export const MenuContentProjects = () => {
  const langange = useRef()

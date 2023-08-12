@@ -1,16 +1,22 @@
-import style from '../../styles/button.module.scss';
+import { useLanguage } from '../../CreateContent/LanguageProvider';
+import style from '../../styles/button.module.scss'
 
-interface LanguageButtonProps {
-  currentLanguage?: 'en' | 'de';
-  toggleLanguage: () => void;
-}
+export const LangageButton: React.FC = () => {
+  const { switchLanguage, language } = useLanguage();
 
-export const LangageButton: React.FC<LanguageButtonProps> = ({ currentLanguage, toggleLanguage }) => {
+  const handleClick = () => {
+    if (language.language === 'de') {
+      switchLanguage('en');
+    } else {
+      switchLanguage('de');
+    }
+  };
+
   return (
     <div className={style['language-button']}>
-      <a key={6} onClick={toggleLanguage}>
-        <div className={currentLanguage !== 'en' ? style['skinny'] : style['fat']}>en</div>|
-        <div className={currentLanguage !== 'de' ? style['skinny'] : style['fat']}>de</div>
+      <a key={6} onClick={handleClick}>
+        <div className={language.language !== 'en' ? style['skinny'] : style['fat']}>en</div>|
+        <div className={language.language !== 'de' ? style['skinny'] : style['fat']}>de</div>
       </a>
     </div>
   );

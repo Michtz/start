@@ -2,16 +2,13 @@ import React from 'react';
 import style from '../../../styles/location.module.scss';
 import HeaderBox from '../../system/HeaderBox';
 import styles from '../../../styles/main.module.scss';
+import { useLanguage } from '../../../CreateContent/LanguageProvider';
 
-interface HeaderBoxProps {
-  title: string;
-  id: string;
-}
-
-const LocationContainer: React.FC<HeaderBoxProps> = ({ id, title }) => {
+const LocationContainer: React.FC = () => {
+  const { language } = useLanguage();
   return (
     <div className={styles['container']}>
-      <HeaderBox title={title} id={id} />
+      <HeaderBox title={language.location.title} id={language.location.id} />
       <div className={style['location-container']}>
         <iframe
           className={style['google-map']}
@@ -23,19 +20,17 @@ const LocationContainer: React.FC<HeaderBoxProps> = ({ id, title }) => {
         ></iframe>
         <div className={style['adress-container']}>
           <div>
-            <h2>Adresse:</h2>
-            <p>Herr</p>
-            <p>Julius Meinhof</p>
-            <p className={style['tel']}>Tel: +41 78 971 50 31</p>
-            <p className={style['mail']}>E-Mail: julius@meinhof.ch</p>
+            <h2>{language.location.content[0].title}:</h2>
+            {language.location.content[0].content.map((obj: any, i: number) => (
+              <p key={i}>{obj}</p>
+            ))}
           </div>
 
           <div className={style['google']}>
-            <h2>Kontakt:</h2>
-            <p>Grisigenstrasse 12</p>
-            <p>6048 Horw</p>
-            <p>Luzern</p>
-            <p>Schweiz (CH)</p>
+            <h2>{language.location.content[1].title}:</h2>
+            {language.location.content[1].content.map((obj: any, i: number) => (
+              <p key={i}>{obj}</p>
+            ))}
           </div>
         </div>
       </div>

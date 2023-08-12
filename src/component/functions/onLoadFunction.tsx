@@ -6,10 +6,8 @@ import CircularProgress from '@mui/material/CircularProgress/CircularProgress';
 const LoadingOverlay: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isFading, setIsFading] = useState(false);
-
   useEffect(() => {
-    // Sobald die Seite geladen ist, beginne mit dem Ausblenden des Overlays
-    window.addEventListener('load', () => {
+    const handleLoad = () => {
       setTimeout(() => {
         setIsFading(true);
       }, 1000);
@@ -18,7 +16,16 @@ const LoadingOverlay: React.FC = () => {
         setIsLoaded(true);
         remove();
       }, 1500);
-    });
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
   const remove = () => {

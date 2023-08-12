@@ -2,12 +2,13 @@ import React from 'react';
 import style from '../../../styles/offerContainer.module.scss';
 import HeaderBox from '../../system/HeaderBox';
 import styles from '../../../styles/main.module.scss';
+import { useLanguage } from '../../../CreateContent/LanguageProvider';
 
-type trans = {
+type Trans = {
   transparency: string;
 };
 
-const Circle: React.FC<trans> = ({ transparency }) => {
+const Circle: React.FC<Trans> = ({ transparency }) => {
   return (
     <svg height="68" width="68">
       <circle
@@ -22,23 +23,15 @@ const Circle: React.FC<trans> = ({ transparency }) => {
   );
 };
 
-interface OfferContentProps {
-  title: string;
-  id: string;
-  content: {
-    title: string;
-    content: string;
-  }[];
-}
-
-const OfferContainer: React.FC<OfferContentProps> = ({ id, title, content }) => {
+const OfferContainer: React.FC = () => {
   const transparencyValues = ['0.05', '0.25', '0.5'];
+  const { language } = useLanguage();
 
   return (
     <div className={styles['container']}>
-      <HeaderBox title={title} id={id} />
+      <HeaderBox title={language.offer.title} id={language.offer.id} />
       <section className={style['offer-container']}>
-        {content.map((obj: any, i: number) => (
+        {language.offer.content.map((obj: any, i: number) => (
           <div className={style['offer-item']} key={i}>
             <div>
               {Array.from({ length: i + 1 }).map((_, j) => (

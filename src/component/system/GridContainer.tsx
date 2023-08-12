@@ -32,7 +32,7 @@ const GridContainer: React.FC<GridContent> = ({ content }): JSX.Element => {
   return (
     <div className={style['grid-container-container']}>
       {content.map((obj: any, index: number) => {
-        return <GridCell header={obj.header} src={obj.src} path={obj.path} index={index} />;
+        return <GridCell key={index} header={obj.header} src={obj.src} path={obj.path} index={index} />;
       })}
     </div>
   );

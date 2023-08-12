@@ -1,18 +1,15 @@
 import HeaderBox from '../../system/HeaderBox';
 import SliderContainer from '../../system/SliderClients';
 import styles from '../../../styles/main.module.scss';
+import { useLanguage } from '../../../CreateContent/LanguageProvider';
 
-interface ClientsProps {
-  title: string;
-  src: string[];
-  id: string;
-}
-
-const CustomersAndClients: React.FC<ClientsProps> = ({ title, src, id }) => {
+const CustomersAndClients: React.FC = () => {
+  const { language } = useLanguage();
+  const Images: string[] = language.customersAndClients.content?.map((content) => content.src);
   return (
     <div className={styles['container']}>
-      <HeaderBox title={title} id={id} />
-      <SliderContainer src={src} />
+      <HeaderBox title={language.customersAndClients.title} id={language.customersAndClients.id} />
+      <SliderContainer src={Images} />
     </div>
   );
 };

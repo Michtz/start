@@ -11,26 +11,28 @@ import {
 } from './pages/Projects';
 import Home from './pages/Home';
 import { Datenschutz, Impressum } from './pages/Legal';
+import { LanguageProvider } from './CreateContent/LanguageProvider';
+import Error from './pages/Error';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="BueroHorw" element={<BueroHorw />} />
-        <Route path="PuristischesBadezimmer" element={<PuristischesBadezimmer />} />
-        <Route path="StudioNeubau" element={<StudioNeubau />} />
-        <Route path="BueroVideolution" element={<BueroVideolution />} />
-        <Route path="WohnungAmSee" element={<WohnungAmSee />} />
-        <Route path="Impressum" element={<Impressum />} />
-        <Route path="Datenschutz" element={<Datenschutz />} />
-      </Routes>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/OfficeHorw" element={<BueroHorw />} />
+          <Route path="/PuristicBathroom" element={<PuristischesBadezimmer />} />
+          <Route path="/NewConstructionStudio" element={<StudioNeubau />} />
+          <Route path="/OfficeVideolution" element={<BueroVideolution />} />
+          <Route path="/LakefrontApartment" element={<WohnungAmSee />} />
+          <Route path="/Imprint" element={<Impressum />} />
+          <Route path="/Privacy" element={<Datenschutz />} />
+          <Route path="/*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

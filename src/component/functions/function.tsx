@@ -91,3 +91,21 @@ export function ScrolbarRemover() {
     };
   }, []);
 }
+
+
+export const HandleScrollbarMovmend = (headerRef) =>
+  useEffect(() => {
+    let scrollTimeout;
+    const onScroll = () => {
+      headerRef.current.classList.add('remove-padding');
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        headerRef.current.classList.remove('remove-padding');
+      }, 2000);
+    };
+    document.addEventListener('scroll', onScroll);
+    return () => {
+      document.removeEventListener('scroll', onScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);

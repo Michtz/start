@@ -2,19 +2,15 @@ import React from 'react';
 import HeaderBox from '../../system/HeaderBox';
 import GridContainer from '../../system/GridContainer';
 import styles from '../../../styles/main.module.scss';
-import { ProjectProps } from '../../types';
+import { useLanguage } from '../../../CreateContent/LanguageProvider';
 
-interface ProjectContainerProps {
-  id: string;
-  title: string;
-  content: ProjectProps[];
-}
 
-const ProjectContainer: React.FC<ProjectContainerProps> = ({ id, title, content }) => {
+const ProjectContainer: React.FC = () => {
+  const { language } = useLanguage();
   return (
     <div className={styles['container']}>
-      <HeaderBox title={title} id={id} />
-      <GridContainer content={content} />
+      <HeaderBox title={language.projects.title} id={language.projects.id} />
+      <GridContainer content={language.projects.content} />
     </div>
   );
 };
