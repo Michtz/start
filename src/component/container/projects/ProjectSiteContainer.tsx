@@ -5,6 +5,7 @@ import ProjectHeaderContainer from './ProjectHeaderContainer';
 import style from '../../../styles/main.module.scss';
 import BottomNavigation from '../../system/BottomNavigationProjectsContainer';
 import { useLanguage } from '../../../CreateContent/LanguageProvider';
+import { ScrolbarRemover } from '../../functions/function';
 
 type ProjectSiteProps = {
   index: number;
@@ -12,7 +13,7 @@ type ProjectSiteProps = {
 
 const ProjectSiteContainer: React.FC<ProjectSiteProps> = ({ index }) => {
   const { language } = useLanguage();
-
+ ScrolbarRemover();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

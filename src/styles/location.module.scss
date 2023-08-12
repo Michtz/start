@@ -1,46 +1,70 @@
+.location-container {
+  display: flex;
+  gap: 4rem;
+  margin: 8rem 4rem;
+  justify-content: center;
 
-.location-container{
-    display: flex;
-    gap: 4rem;
-    margin: 8rem 4rem;
-justify-content: center;
-
-.adress-container{
+  .adress-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
+  }
 
-    iframe{
-        max-width: 900px;
-    }
-    div:first-of-type{
-        margin-bottom: 2rem;
-    }
+  iframe {
+    max-width: 900px;
+  }
+  div:first-of-type {
+    margin-bottom: 2rem;
+  }
 
-    p{
-        font-size: 14px;
-    }
-    h2{
-        font-size: 24px;
-        margin: 0;
-        line-height: 18px;
-        text-transform: capitalize;
-    }
-}
+  p {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 18px;
+    text-transform: capitalize;
+  }
 
-
-.google-map {
+  .google-map {
     height: 25rem;
     position: relative;
-    width:  70%;
+    width: 70%;
     border: none;
 
-    /* Macht Maps Grau/ Weiss */
+    /* Macht Maps Grau/Weiss */
     -webkit-filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: gray;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: auto;
+    justify-content: center;
+    max-width: fit-content;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    div:first-of-type {
+      margin-bottom: 0;
+    }
+    .adress-container {
+      flex-direction: row;
+      gap: 6rem;
+      margin-bottom: 0;
+      margin-top: 3rem;
+      @media screen and (max-width: 500px) {
+        gap: 2rem;
+      }
+      .contact {
+        text-align: right;
+      }
+    }
+    .google-map {
+      width: 100% !important;
+    }
+  }
 }

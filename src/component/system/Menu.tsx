@@ -57,13 +57,13 @@ export const MenuContentInRow: React.FC<MenuContentMainProps> = ({ menuOpen, nav
  **
  */
 
-export const Menu = ({ navContent, column = false }) => {
+export const Menu = ({ navContent, column = false, size }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   return (
     <nav className={style['mainNav']}>
       <div>
         <Hamburger
-          size={40}
+          size={size}
           easing="ease-in"
           rounded
           color="white"

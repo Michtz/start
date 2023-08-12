@@ -1,46 +1,39 @@
-.about-container{
-margin: 8rem 4rem;
-display: flex;
-justify-content: center;
-gap: 5rem;
-img{
+.about-container {
+  margin: 8rem 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  img {
     width: 80%;
     max-width: 350px;
     min-width: 230px;
-}
-.first-line, .second-line{
+  }
+  .first-line,
+  .second-line {
     display: flex;
     justify-content: center;
     word-spacing: 1%;
 
-
-
-
-
-
-    h1{
-        font-size: 400%;
-        font-weight: 100;
-        margin: 0;
-        box-sizing: border-box;
-        display: flex;
-        align-items: flex-end;
-        padding-right: 5px;
-justify-content: flex-end;
-
-
+    h1 {
+      font-size: 400%;
+      font-weight: 100;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-end;
+      padding-right: 5px;
+      justify-content: flex-end;
     }
-    h3{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 2.5%;
-justify-content: flex-end;
-
+    h3 {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2.5%;
+      justify-content: flex-end;
     }
-}
+  }
 
-.about-content{
+  .about-content {
     display: flex;
     justify-content: center;
     margin: 2rem auto;
@@ -48,319 +41,35 @@ justify-content: flex-end;
     max-width: 550px;
     font-size: 16px;
     line-height: 120%;
+  }
+
+  @media screen and (max-width: 950px) {
+    display: block;
+    margin-top: 2rem;
+    .about-text {
+      .second-line {
+        margin-top: 1rem;
+      }
+    }
+    div:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      margin-top: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .about-text h1 {
+      font-size: 330%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .about-text h1 {
+      font-size: 230%;
+    }
+
+    .about-text h3 {
+      font-size: 90%;
+    }
+  }
 }
-
-}
-
-//                             display: flex;
-//                             flex-flow: row;
-//                             margin: 4rem 10% 12% 10% ; 
-//                             border-radius: 2px;
-//                             padding: 0rem;
-//                         }
-                
-
-
-
-
-
-
-// /* 
-
-//                     /*                                                                          */
-//                                 /* Stylesheet About Meinhof Innenarchitektur Home-Seite */
-//                                             /* Michael Venetz Sept. 2022 */
-//                     /*                                                                          */
-
-
-//                     @media screen {
-
-//                         #about{
-//                             display: flex;
-//                             flex-flow: row;
-//                             margin: 4rem 10% 12% 10% ; 
-//                             border-radius: 2px;
-//                             padding: 0rem;
-//                         }
-                
-                        
-//                                 #about p{
-//                                     margin-right: 3rem;
-//                                     line-height: 1.8rem;
-//                                     letter-spacing: 1.5px;
-                
-//                                 }
-                
-//                                         #about p::first-letter{
-//                                             font-size: 3.5rem;
-//                                             position: relative;
-//                                             /* top: 50px; */
-//                                             /* margin-top: 3rem; */
-//                                         }
-                
-                                        
-                
-//                                                 .bildJulius{
-//                                                     box-shadow:  -1px 5px 50px 24px rgba(112,109,105,0.31) ;
-//                                                     border-radius: 2px;
-//                                                     width: 350px;
-//                                                 }
-                
-//                                                         #about figcaption{
-//                                                             text-align: right;
-//                                                             margin-top: 2rem;
-//                                                             line-height: 20px;
-//                                                             letter-spacing: 1.5px;
-//                                                         }
-                
-                
-                
-//                 #aboutHeader{
-//                     margin-top: 10%;
-//                    margin-bottom: 0%;
-//                 }
-                
-//                     .aboutInline{
-//                         display: flex;
-//                         margin: 8%;
-//                         margin-bottom: 10%;
-//                     }
-                
-//                     .firstInline, .secondInline{
-//                         display: flex;
-//                         margin: auto;
-//                         justify-content: center;
-//                         align-items: baseline;
-                        
-//                     }
-//                     .secondInline{
-//                         margin-top: 4%;
-//                     }
-                
-//                     .firstInline h1, .secondInline h1{
-//                         font-size: 400%;
-//                         margin: 0;
-//                         width: fit-content;
-//                     }
-                
-//                     .firstInline h3, .secondInline h3{
-//                         margin: 0% 2%;
-//                         padding-top: 7%;
-//                         width: fit-content;
-//                     }
-                
-//                     .tirdLine{
-//                         margin-bottom: 0;
-//                         text-align: left;
-//                         padding-left: 2%;
-//                         margin-top: 8%;
-//                     }
-//                     .tirdLine p{
-//                         letter-spacing: 0.8px;
-//                         line-height: 130%;
-//                         text-align: left;
-//                     }
-                
-//                     .aboutText{
-//                         text-align: center;
-//                         width: auto;
-//                     }
-                
-//                     .klapptext{
-//                         margin:  2%;
-//                         margin-top: 10%;
-//                         margin-right: 15%;
-//                     }
-//                     .langtext{
-//                         margin: 0;
-//                         max-height: 0;
-//                         overflow: hidden;
-//                         letter-spacing: 0.8px;
-//                         line-height: 130%;
-//                         text-align: left;
-//                         padding-left: 2%;
-                        
-//                     }
-                
-//                     .sichtbar{
-//                         animation-name: showMoreHeight;
-//                         animation-duration: 4s;
-//                         animation-fill-mode: forwards;
-//                     }
-                
-//                     @keyframes showMoreHeight{
-//                         from {max-height: 0;} 
-//                             to {max-height: 1000px;} 
-//                     }
-                
-//                     .pictureDown{
-//                         animation-name: slideDownPicture;
-//                         animation-duration: 4s;
-//                         animation-fill-mode: forwards;
-//                     }
-                    
-                    
-//                         @keyframes slideDownPicture{
-//                             from {margin-top: 0%;} 
-//                                 to {margin-top: 50%;} 
-//                         } 
-                
-                
-//                             .readMoreLink{
-//                                 margin-top: 0% !important;
-//                                 cursor: pointer;
-//                             }
-                
-                            
-//                         @media screen and (min-width: 1400px){                     /* Media Quiri Tag */
-                          
-//                             .aboutInline{
-//                                 max-width: 1700px;
-//                                 margin: auto;
-//                                 margin-bottom: 7%;
-//                                 margin-top: 4%;
-//                                 justify-content: center;
-//                             }
-                
-//                             #aboutHeader{
-//                                 margin-top: 6%;
-//                                 margin-bottom: 0%;
-//                             }
-                
-//                             .tirdLine{
-//                                 max-width: 700px;
-//                                 margin-left: auto;
-//                                 margin-right: auto;
-//                             }
-                
-//                             .langtext{
-//                                 max-width: 700px;
-                
-//                             }
-                
-                            
-                
-//                         }/* Ende Media Quiri*/
-                
-                
-                
-                
-//                         @media screen and (max-width: 1100px){                     /* Media Quiri Tag */
-                
-                           
-                
-//                                     #about{
-//                                         flex-flow: column;
-//                                         text-align: center;
-//                                     }
-                            
-//                                         #about p{
-//                                             margin: 0;
-//                                         }
-                
-//                                             .bildJulius{
-//                                                 margin-top: 4rem;
-//                                                 width: 300px;
-//                                             }
-                
-//                                                 #about figcaption{
-//                                                     text-align: center;
-//                                                 }
-                
-//                         }/* Ende Media Quiri*/
-                
-                
-//                         @media screen and (max-width: 900px){                     /* Media Quiri Tag */
-                
-                
-//                             .aboutInline{
-//                                 flex-flow: column;
-//                             }
-//                             .bildJulius{
-//                                 width: 400px;
-//                             }
-                
-//                             .julius{
-//                                 display: flex;
-//                                 flex-flow: column;
-//                                 align-items: center;
-//                             }
-                
-//                             .bildJulius{
-//                                 margin-top: 30px !important;
-//                             }
-                
-//                             .klapptext{
-//                                 margin: 0 10%;
-                               
-//                             }
-                
-//                             .pictureDown{
-//                                 animation-name: none;
-                            
-//                             }
-                
-                
-//                         }/* Ende Media Quiri*/
-                
-                
-//                         @media screen and (max-width: 700px){                     /* Media Quiri Tag */
-                
-//                             .bildJulius{
-//                                 width: 350px;
-//                             }
-                
-                
-//                         }/* Ende Media Quiri*/
-                
-                
-//                         @media screen and (max-width: 600px){                     /* Media Quiri Tag */
-                
-//                             .bildJulius{
-//                                 width: 300px;
-//                             }
-                
-                
-//                             .firstInline h1, .secondInline h1{
-//                                 font-size: 300%;
-//                             }
-                
-//                             .firstInline h3, .secondInline h3{
-//                                 font-size: 90%;
-//                             }
-//                             .aboutText p{
-//                                 font-size: 80%;
-//                                 line-height: 150%;
-//                                 letter-spacing: 1.5px;
-//                             }
-                
-                            
-//                         }/* Ende Media Quiri*/
-                
-//                         @media screen and (max-width: 420px){                     /* Media Quiri Tag */
-                
-//                             .julius figcaption{
-//                                 font-size: 75%;
-//                             }
-                
-//                             .bildJulius{
-//                                 width: 240px;
-//                             }
-                
-//                             .firstInline h1, .secondInline h1{
-//                                 font-size: 260%;
-//                             }
-                
-//                             .firstInline h3, .secondInline h3{
-//                                 font-size: 70%;
-//                             }
-//                             .aboutText p{
-//                                 font-size: 60%;
-//                                 line-height: 140%;
-//                                 letter-spacing: 1.4px;
-//                             }
-                
-                            
-//                         }/* Ende Media Quiri*/
-                
-//                     }/* Ende Media Screen*/ */

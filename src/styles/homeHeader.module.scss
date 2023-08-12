@@ -1,9 +1,7 @@
 $primary-color: #ffffff;
 
-
-
 .home-header-container {
-  min-height: 545px;
+  min-height: fit-content;
   background-image: url('https://meinhof.ch/src/titelbilder/badehausBeleuchtet.jpg');
   background-position: center bottom;
   background-size: cover;
@@ -11,7 +9,7 @@ $primary-color: #ffffff;
   margin: 0 -1vw;
   max-height: 120em;
   padding-bottom: 2rem;
-  width:100vw;
+  width: 100vw;
 
   .arrow {
     display: flex;
@@ -22,8 +20,8 @@ $primary-color: #ffffff;
       cursor: pointer;
     }
 
-    & a:hover{
-      svg{
+    & a:hover {
+      svg {
         position: relative;
         top: 2px;
       }
@@ -40,10 +38,30 @@ $primary-color: #ffffff;
     font-family: 'raleway', sans-serif;
     font-size: 550%;
     line-height: 70%;
-    h1{
+    h1 {
       margin: 0;
       padding-top: 5px;
       font-size: 110%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .header-text {
+      line-height: 42%;
+      margin-top: 2rem;
+      h1 {
+        font-size: 70%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .header-text {
+      line-height: 30%;
+      margin-bottom: 0;
+      h1 {
+        font-size: 50%;
+      }
     }
   }
 }

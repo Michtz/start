@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import style from '../../../styles/homeHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
@@ -23,13 +23,19 @@ const ArrowDown: React.FC<Href> = ({ href }) => {
 const HomeHeaderContainer: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const { language } = useLanguage();
+  const [size, setSize] = useState(40);
   HandleScrollbarMovmend(headerRef);
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setSize(20);
+    }
+  }, [window]);
 
   return (
     <div>
       <div ref={headerRef} className={style['home-header-container']}>
         <LangageButton />
-        <Menu navContent={language.navigations.home} />
+        <Menu navContent={language.navigations.home} size={size} />
         <Logo />
         <div className={style['header-text']}>
           {language.homeHeader.map((obj: string, i: number) => (

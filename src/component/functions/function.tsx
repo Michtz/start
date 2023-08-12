@@ -64,34 +64,28 @@ export function handleKeyDown(setModal) {
   }, []);
 }
 
-// scrolbar remover
-
+// Scrolbar remover
 export function ScrolbarRemover() {
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout;
-
     const onScroll = () => {
-      document.body.classList.remove('hide-scrollbar');
-      document.body.classList.add('show-scrollbar');
-
-      clearTimeout(scrollTimeout);
-
-      scrollTimeout = setTimeout(() => {
-        document.body.classList.remove('show-scrollbar');
-        document.body.classList.add('hide-scrollbar');
-      }, 2000);
+      if (window.innerWidth > 768) {
+        document.body.classList.remove('hide-scrollbar');
+        document.body.classList.add('show-scrollbar');
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          document.body.classList.remove('show-scrollbar');
+          document.body.classList.add('hide-scrollbar');
+        }, 2000);
+      }
     };
-
     document.addEventListener('scroll', onScroll);
-
-    // Clean up function
     return () => {
       document.removeEventListener('scroll', onScroll);
       clearTimeout(scrollTimeout);
     };
   }, []);
 }
-
 
 export const HandleScrollbarMovmend = (headerRef) =>
   useEffect(() => {
@@ -109,7 +103,6 @@ export const HandleScrollbarMovmend = (headerRef) =>
       clearTimeout(scrollTimeout);
     };
   }, []);
-
 
 export function moveLastItemToFront(setCurrentContent) {
   setCurrentContent((prevContent: any) => {

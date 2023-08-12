@@ -26,7 +26,7 @@ const LocationContainer: React.FC = () => {
             ))}
           </div>
 
-          <div className={style['google']}>
+          <div className={style['contact']}>
             <h2>{language.location.content[1].title}:</h2>
             {language.location.content[1].content.map((obj: any, i: number) => (
               <p key={i}>{obj}</p>

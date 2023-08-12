@@ -49,6 +49,12 @@
     a:hover::before {
       width: 100%;
     }
+
+    @media screen and (max-width: 1000px) {
+      a {
+        font-size: 70%;
+      }
+    }
   }
 
   .in-row-nav-content-open {
@@ -101,6 +107,25 @@
 
     a:hover::before {
       width: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 70%;
+      a {
+        margin-right: 1rem;
+        font-size: 70%;
+      }
+    }
+
+    @media screen and (max-width: 768px){
+     flex-direction: column;
+     margin-top: 5rem;
+
+     width: 25%;
+     a{
+      font-size: 80%;
+      margin-bottom: 8px;
+     }
     }
   }
 }
@@ -177,7 +202,7 @@
     margin: 0.7rem 2rem 0rem 0rem;
     white-space: nowrap;
     border-radius: 2px;
-    &:hover{
+    &:hover {
       font-weight: 500;
     }
   }
@@ -196,7 +221,6 @@
 
   a:hover::before {
     width: 100%;
-
   }
 }
 

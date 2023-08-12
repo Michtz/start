@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from '../../../styles/projectHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
@@ -15,6 +15,12 @@ interface HeaderProps {
 }
 
 const LegalHeaderContainer: React.FC<HeaderProps> = ({ navContent, title }) => {
+  const [size, setSize] = useState(40);
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setSize(30);
+    }
+  });
   return (
     <div>
       <div
@@ -26,7 +32,7 @@ const LegalHeaderContainer: React.FC<HeaderProps> = ({ navContent, title }) => {
         }}
       >
         <LangageButton />
-        <Menu navContent={navContent} column />
+        <Menu navContent={navContent} size={size} column />
         <Logo />
         <div className={style['header-text']}>
           <h1>{title}</h1>
