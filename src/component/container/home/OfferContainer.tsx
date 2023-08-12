@@ -32,26 +32,23 @@ interface OfferContentProps {
 }
 
 const OfferContainer: React.FC<OfferContentProps> = ({ id, title, content }) => {
+  const transparencyValues = ['0.05', '0.25', '0.5'];
+
   return (
     <div className={styles['container']}>
       <HeaderBox title={title} id={id} />
       <section className={style['offer-container']}>
-        <div>
-          <Circle transparency={'0.5'} />
-        </div>
-        <div>
-          <Circle transparency={'0.25'} />
-          <Circle transparency={'0.5'} />
-        </div>
-        <div>
-          <Circle transparency={'0.05'} />
-          <Circle transparency={'0.25'} />
-          <Circle transparency={'0.5'} />
-        </div>
         {content.map((obj: any, i: number) => (
-          <div key={i}>
-            <h3>{obj.title}</h3>
-            <div>{obj.content}</div>
+          <div className={style['offer-item']} key={i}>
+            <div>
+              {Array.from({ length: i + 1 }).map((_, j) => (
+                <Circle key={j} transparency={transparencyValues[j]} />
+              ))}
+            </div>
+            <div>
+              <h3>{obj.title}</h3>
+              <p>{obj.content}</p>
+            </div>
           </div>
         ))}
       </section>

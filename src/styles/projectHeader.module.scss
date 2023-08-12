@@ -16,20 +16,26 @@
       color: white;
       font-size: 580%;
       filter: blur(40px);
-      animation:forwards;
+      animation: forwards;
       animation-name: fadeText;
-      animation-duration: 1.2s;
+      animation-duration: 3.2s;
     }
 
-  
-    
+    @keyframes fadeText {
+      from {
+        filter: blur(40px);
+      }
+      to {
+        filter: blur(0px);
+      }
+    }
+  }
 
-
-@keyframes fadeText {
-    from {filter: blur(40px)} 
-    to {filter: blur(0px)} 
-}
-
-
+  @media screen and (max-width: 786px) {
+    .header-text {
+      padding-bottom: 2rem;
+      h1 {
+      font-size: 280%;
+    }}
   }
 }
