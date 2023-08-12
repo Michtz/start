@@ -109,3 +109,13 @@ export const HandleScrollbarMovmend = (headerRef) =>
       clearTimeout(scrollTimeout);
     };
   }, []);
+
+
+export function moveLastItemToFront(setCurrentContent) {
+  setCurrentContent((prevContent: any) => {
+    const newContent = [...prevContent];
+    const lastItem = newContent.pop();
+    newContent.unshift(lastItem);
+    return newContent;
+  });
+}

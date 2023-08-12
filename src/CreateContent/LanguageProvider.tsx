@@ -1,8 +1,8 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 // Importieren Sie Ihre Sprachdateien
-import DE from './de/content/de';
-import EN from './en/content/en';
+import DE from './de/de';
+import EN from './en/en';
 
 type LanguageType = typeof DE | typeof EN;
 

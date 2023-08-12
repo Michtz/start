@@ -1,15 +1,16 @@
-import { useContext, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import style from '../../../styles/homeHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
-import { NavContent } from '../../../CreateContent/de/content/CreateContext';
 import { Logo } from '../../system/Logo';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { LangageButton } from '../../system/LanguageButton';
 import { useLanguage } from '../../../CreateContent/LanguageProvider';
 import { HandleScrollbarMovmend } from '../../functions/function';
 
-const ArrowDown = ({ href }) => {
+type Href = { href: string };
+
+const ArrowDown: React.FC<Href> = ({ href }) => {
   return (
     <div className={style['arrow']}>
       <a href={href}>
@@ -19,7 +20,7 @@ const ArrowDown = ({ href }) => {
   );
 };
 
-const HomeHeaderContainer = () => {
+const HomeHeaderContainer: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const { language } = useLanguage();
   HandleScrollbarMovmend(headerRef);
@@ -35,7 +36,7 @@ const HomeHeaderContainer = () => {
             <h1 key={i}>{obj}</h1>
           ))}
         </div>
-        <ArrowDown href={language.navigations.home[2].path}  />
+        <ArrowDown href={language.navigations.home[2].path} />
       </div>
       <DreieckComponent />
     </div>

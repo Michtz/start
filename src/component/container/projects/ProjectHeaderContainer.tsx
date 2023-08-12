@@ -3,6 +3,7 @@ import style from '../../../styles/projectHeader.module.scss';
 import DreieckComponent from '../../system/DreieckComponent';
 import { Menu } from '../../system/Menu';
 import { Logo } from '../../system/Logo';
+import { LangageButton } from '../../system/LanguageButton';
 
 interface HeaderProps {
   header: string;
@@ -21,6 +22,7 @@ const ProjectHeaderContainer: React.FC<HeaderProps> = ({ header, src, navContent
         className={style['header-container']}
         style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
+        <LangageButton />
         <Menu navContent={navContent} column />
         <Logo />
         <div className={style['header-text']}>

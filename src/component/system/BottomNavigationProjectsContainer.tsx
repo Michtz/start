@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import style from '../../styles/bottomNav.module.scss';
 import { ProjectProps } from '../types';
-
 
 interface BottomNavProps {
   navContent: ProjectProps[];
@@ -23,14 +22,13 @@ const BottomNavigation: React.FC<BottomNavProps> = ({ navContent }) => {
             <figure key={index}>
               <img src={obj.src}></img>
               <div ref={parentRef}>
-                <Link
-                  to={obj.path}
-                  target="_self"
+                <a
+                  href={obj.path}
                   onMouseEnter={() => setHovered(index)}
                   onMouseLeave={() => setHovered(-1)}
                 >
-                  <h2 className={style[hovered === index ? 'hovered' : '']}> {obj.header}</h2>
-                </Link>
+                  <h2 className={style[hovered === index ? 'hovered' : '']}>{obj.header}</h2>
+                </a>
               </div>
             </figure>
           );

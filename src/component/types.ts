@@ -42,22 +42,20 @@ export interface MainContentProps {
   location: SectionProps;
 }
 
-
 export interface NavContent {
-    header: string;
-    src: string;
-    path: string;
+  header: string;
+  src: string;
+  path: string;
 }
-  
 
 export interface HeaderProps {
-    header: string;
-    src: string;
-    path: string;
-    art: string;
-    groese: string;
-    konzept: string;
-    etos: string;
-    anspruch: string[];
-  }
-  
+  header?: string;
+  src?: string;
+  path?: string;
+  art?: string;
+  size?: string;
+  concept?: string;
+  ethos?: string;
+  requirements?: string[];
+  boolean?: boolean;
+}

@@ -5,7 +5,7 @@ import styles from '../../../styles/main.module.scss';
 import { useLanguage } from '../../../CreateContent/LanguageProvider';
 
 // static component
-const Header = () => {
+const Header: React.FC = () => {
   const { language } = useLanguage();
   const b: boolean = language.boolean;
   return (

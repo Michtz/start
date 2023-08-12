@@ -1,42 +1,33 @@
 import React from 'react';
 import style from '../../../styles/projectHead.module.scss';
+import { HeaderProps } from '../../types';
+import { useLanguage } from '../../../CreateContent/LanguageProvider';
 
-interface ProjectHeaderProps {
-  content: {
-    header: string;
-    src: string;
-    path: string;
-    art: string;
-    groese: string;
-    konzept: string;
-    etos: string;
-    anspruch: string[];
-  };
-}
-
-const TitlesectionProjects: React.FC<ProjectHeaderProps> = ({ content }) => {
+const TitlesectionProjects: React.FC<HeaderProps> = ({ art, size, concept, ethos, requirements }) => {
+  const { language } = useLanguage();
+  const l: boolean = language.boolean;
   return (
-    <div className={style['head-project-content']} >
+    <div className={style['head-project-content']}>
       <div>
-        <h2>Projektart:</h2>
-        <p>{content.art}</p>
+        <h2>{l ? 'Project type' : 'Projektart'}:</h2>
+        <p>{art}</p>
       </div>
       <div>
-        <h2>Projektgrösse:</h2>
-        <p>{content.groese}</p>
+        <h2>{l ? 'Project size' : 'Projektgrösse'}:</h2>
+        <p>{size}</p>
       </div>
       <div>
-        <h2>Konzept:</h2>
-        <p>{content.konzept}</p>
+        <h2>{l ? 'Concept' : 'Konzept'}:</h2>
+        <p>{concept}</p>
       </div>
       <div>
-        <h2>Designethos:</h2>
-        <p>{content.etos}</p>
+        <h2>{l ? 'Designethos' : 'Designethos'}:</h2>
+        <p>{ethos}</p>
       </div>
       <div>
-        <h2>Ansprüche:</h2>
+        <h2>{l ? 'Requirements' : 'Ansprüche'}:</h2>
         <ul>
-          {content.anspruch.map((content: string, index:number): JSX.Element => {
+          {requirements.map((content: string, index: number): JSX.Element => {
             return <li key={index}>{content}</li>;
           })}
         </ul>

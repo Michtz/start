@@ -9,6 +9,7 @@ type GridContent = {
 
 // One Grid Element
 const GridCell: React.FC<ProjectProps> = ({ src, header, path, index }): JSX.Element => {
+  
   const [hovered, setHovered] = useState(-1);
   return (
     <figure key={path}>
@@ -16,7 +17,6 @@ const GridCell: React.FC<ProjectProps> = ({ src, header, path, index }): JSX.Ele
       <div>
         <Link
           to={path}
-          target="_self"
           onMouseEnter={() => setHovered(index)}
           onMouseLeave={() => setHovered(-1)}
         >

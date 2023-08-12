@@ -10,11 +10,15 @@ interface ProjectContentProps {
 }
 
 const ProjectContentContainer: React.FC<ProjectContentProps> = ({ head, content }) => {
-  console.log(content);
-  
   return (
     <div>
-      <ProjectHeader content={head} />
+      <ProjectHeader
+        art={head.art}
+        size={head.size}
+        concept={head.concept}
+        ethos={head.ethos}
+        requirements={head.requirements}
+      />
       <hr />
       <PictureTextContainer src={content[0].src} text={content[0].text} />
       <PictureTextContainerSlider src={content[1].src} src2={content[1].src2} text={content[1].text} />

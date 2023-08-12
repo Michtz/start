@@ -1,7 +1,7 @@
 import React from 'react';
 import style from '../../styles/dreieck.module.scss';
 
-const DreieckComponent = () => {
+const DreieckComponent:React.FC = () => {
   return (
     <div className={style['dreieckeKomplett']}>
       <div className={style['dreieckenOben']}>

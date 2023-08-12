@@ -21,7 +21,7 @@ const PictureTextContainerSlider: React.FC<Props> = ({ src, src2, text, right })
   handleKeyDown(setModal);
   /*   imgChanger(modal, setImage, image, setIsFading); */
   scrollControl(modal, document);
-/*   useEffect(() => {
+  /*   useEffect(() => {
     const intervalId = setInterval(() => {
       console.log('modalTest');
       if (!modal) {

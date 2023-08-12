@@ -1,20 +1,11 @@
 import { useState, useEffect } from 'react';
 import style from '../../styles/slider.module.scss';
-
-function moveLastItemToFront(setCurrentContent) {
-  setCurrentContent((prevContent: any) => {
-    const newContent = [...prevContent];
-    const lastItem = newContent.pop();
-    newContent.unshift(lastItem);
-    return newContent;
-  });
-}
-
+import { moveLastItemToFront } from '../functions/function';
 interface SliderProps {
   src: string[];
 }
 
-const SliderContainer:React.FC<SliderProps> = ({ src }) => {
+const SliderContainer: React.FC<SliderProps> = ({ src }) => {
   const [currentContent, setCurrentContent] = useState(src);
   const [isFadingOut, setIsFadingOut] = useState(false);
 

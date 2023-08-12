@@ -1,23 +1,6 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import style from '../../styles/navigation.module.scss';
 import Hamburger from 'hamburger-react';
-import { Link } from 'react-router-dom';
-import { Headers } from '../../CreateContent/de/content/CreateContext';
-
-
-export const MenuContentProjects = () => {
- const langange = useRef()
-  const context = useContext(Headers);
-
-  return (
-    <div>
-      {context.map((context: any, i: number): any => (
-        <Link to={context.path}>{context.header}</Link>
-      ))}
-      rrr
-    </div>
-  );
-};
 
 interface MenuContentMainProps {
   menuOpen: boolean;
@@ -51,7 +34,6 @@ export const MenuContentColumn: React.FC<MenuContentMainProps> = ({ menuOpen, na
 
 // Row Nav
 export const MenuContentInRow: React.FC<MenuContentMainProps> = ({ menuOpen, navContent }) => {
-
   return menuOpen ? (
     <div className={style['in-row-nav-content-open']}>
       {navContent.map((obj: any, i: number) => (
